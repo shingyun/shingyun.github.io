@@ -1,0 +1,117 @@
+
+/*	greenblue: #205F65
+	lightgrey: #F3F7F7
+	grey: #D3D3D3;
+	yellow: #F9DE5F
+	teal: #008080;
+*/
+
+* {
+    margin: 0px;
+    padding: 0px;
+    position: relative;
+    font-family: 'Avenir','Helvetica','san-serif';
+}
+
+
+/* header*/
+
+#header {
+	height: 100px;
+	background-color: white;
+}
+
+.header-bar {
+	width: 100px;
+	height:100px;
+	display: inline-block;
+	vertical-align: top;
+	color: #666666;
+}
+
+#btn-work, #btn-about{
+    padding: 40px 0px;
+}
+
+#btn-work, #btn-about:hover{
+    cursor: pointer;
+}
+
+#logo{
+	width: 180px;
+}
+
+#logo img{
+	width: 60px;
+	height: 60px;
+    padding: 20px 0px;
+    padding-left: 80px;
+    padding-right: 40px; 
+}
+
+
+/* Info section */
+
+
+#section-info {
+	background-color: #205F65;
+	height: 300px;
+    width: 100%;
+    padding-top: 50px; 
+}
+
+
+#name, #intro{
+    padding-left: 80px;
+}
+
+h1{
+    color: #F3F7F7;
+	font-size: 40px;
+	letter-spacing: 3px;
+
+}
+
+p{
+	color: #D3D3D3;
+	font-size: 18px;
+	line-height: 1.6;
+	letter-spacing: 0.5px;
+
+}
+
+.info-span {
+	border-bottom: 1.5px solid #F9DE5F;
+}
+
+
+#section-work {
+    width: 100%;
+	min-height: 680px;
+}
+
+#section-work-title{
+	height: 200px;
+}
+
+.link-project{
+	width: 25%;
+}
+
+.img-project {
+    width: 25%;
+    position: relative;
+    float: left;
+}
+
+.img-project:hover {
+    opacity: 0.8;
+}
+
+
+
+
+
+
+
+

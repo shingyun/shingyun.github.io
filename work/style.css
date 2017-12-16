@@ -1,0 +1,55 @@
+
+/*	greenblue: #205F65
+	lightgrey: #F3F7F7
+	grey: #D3D3D3;
+	yellow: #F9DE5F
+*/
+
+* {
+    margin: 0px;
+    padding: 0px;
+    position: relative;
+}
+
+#landing {
+    background-color: #205F65;
+    height: 450px;
+    min-height: 300px;
+}
+
+#info-wrapper {
+    width: 100%;
+    left: 10%;
+    top: 20%;
+    position: relative;
+
+}
+
+h1,p{
+    font-family: 'Avenir','Helvetica','san-serif';
+}
+
+h1{
+    color: #F3F7F7;
+	font-size: 50px;
+	letter-spacing: 3px;
+
+}
+
+p{
+	color: #D3D3D3;
+	font-size: 18px;
+	line-height: 1.6;
+	letter-spacing: 0.5px;
+	position: absolute;
+
+}
+
+.info-span {
+	border-bottom: 1.2px solid #F9DE5F;
+}
+
+#works {
+	background-color: #D3D3D3;
+	min-height: 680px;
+}
