@@ -52,6 +52,12 @@ body {
 }
 
 
+#notice{
+	width: 55%;
+	margin: auto;
+	padding: 20px;	
+}
+
 #name, #intro, #socials {
 	width: 55%;
 	margin: auto;
