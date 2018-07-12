@@ -19,6 +19,7 @@
 
 body {
 /*	background-color: #F3F3F3;*/
+	color: #777777;
 }
 
 
@@ -73,7 +74,6 @@ body {
 }
 
 #intro {
-	color: #777777;
 	font-size: 18px;
 	line-height: 1.6;
 	letter-spacing: 0px;
@@ -86,8 +86,8 @@ body {
 
 /* Social media icons */
 .social {
-    width: 40px;
-    height: 40px;
+    width: 35px;
+    height: 35px;
     display: inline-block;
     margin: 0px 1.5px;
 }
@@ -112,11 +112,34 @@ body {
 	padding-bottom: 30px;
 }
 
+
+#filters {
+	width: 50%;
+	margin: auto;
+	padding-bottom: 30px;
+	text-align: center;
+}
+
+.filter {
+	display: inline-block;
+	padding: 2.5px 3px;
+	margin: 0px 5px;
+	border-bottom: 1px solid #777777;
+}
+
+.filter:hover {
+	cursor: pointer;
+}
+
+.filter-selected {
+	font-weight: 400;
+    border-bottom: 3px solid #777777;
+}
+
 .projects {
     width: 61%;
     height: initial;
     margin: auto;
-
 }
 
 .project {
@@ -191,4 +214,8 @@ body {
 	background-color: hsla(0, 40%, 65%, 1);;
 }
 
+#section-footer {
+	text-align: center;
+	margin: 25px 0px;
+}
 

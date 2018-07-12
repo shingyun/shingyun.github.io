@@ -12,11 +12,12 @@
       crossorigin="anonymous"></script>
     <script src = 'https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.16/vue.js'></script>
     <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/d3/4.13.0/d3.js'></script>
 </head>
 <body>
 <div id = 'app'>
     <div id = 'section-info'>
-         <h1 id = 'notice'>//This site is under construction//</h1>
+         <h3 id = 'notice'>//This site is under construction//</h3>
          <h1 id = 'name'>SHINGYUN CHIANG</h1>
          <p id = 'intro'>
          	Hi! I am a graduate student in the <span class = 'info-span'>Information Design and Visualization</span> program of Northeasetern University in Boston. I worked at <span class = 'info-span'>Thomson Reuters Labs</span> and <span class = 'info-span'>Graphicacy</span> as a data visualization intern, responsible for <span class = 'info-span'>data analysis, visualization and product prototype</span>. The tools I use are mainly <span class = 'info-span'>D3, R and Adobe Illustrator</span>. I also have experience with Leaflet, ArcGIS/QGIS, Tableau and python. I love cooking, coffee and animals.
@@ -38,20 +39,41 @@
          </div>
     </div>
     <div id = 'section-work'>
-        <div class = 'projects' id = 'app-project'>
+        <div id = 'filters'>
+            <div class = 'filter' v-for = 'filter in filters' :id = 'filter'>{{filter}}</div>
+        </div>
+        <div class = 'projects'>
             <div class = 'project' v-for = 'project in projects'>
-                <img class = 'img-project' :src = 'project.img'>
-                <h3 class = 'projectTitle' v-text = 'project.title'></h3>
-<!--                 <h3 class = 'mobile-projectTitle' v-text = 'project.title'></h3> -->
-                <div class = 'tags'>
-                    <div class ='tag' v-for = 'tag in project.tags'>{{tag}}</div>
-                </div>
-                <div class = 'tools'>
-                    <div class ='tool' v-for = 'tool in project.tools'>{{tool}}</div>
-                </div>
+<!--                 <router-link :to = "{name: project.path}"> -->
+                    <img class = 'img-project' :src = 'project.img'>
+<!--                 </router-link>  -->
+                    <h3 class = 'projectTitle' v-text = 'project.title'></h3>
+    <!--                 <h3 class = 'mobile-projectTitle' v-text = 'project.title'></h3> -->
+                    <div class = 'tags'>
+                        <div class ='tag' v-for = 'tag in project.tags'>{{tag}}</div>
+                    </div>
+                    <div class = 'tools'>
+                        <div class ='tool' v-for = 'tool in project.tools'>{{tool}}</div>
+                    </div> 
             </div>
 
         </div>
+    </div>
+    <div id = 'section-footer'>
+        <div class = 'social' id = 'linkedin'>
+              <a href = 'https://www.linkedin.com/in/shingyunchiang/' target = _blank>
+                <img class = 'img-social' src = 'media/icons/icon-linkedin.png'>
+              </a>
+            </div>
+            <div class = 'social' id = 'twitter'>
+              <a href = 'https://twitter.com/ShingyunChiang' target = _blank>
+                <img class = 'img-social' src = 'media/icons/icon-twitter.png'>
+              </a>
+            </div>
+            <div class = 'social' id = 'cv'>
+              <img class = 'img-social' src = 'media/icons/icon-cv.png'>
+            </div>
+        </div>    
     </div>
 </div>
 <!-- <script src="d3.js"></script> -->
