@@ -127,6 +127,7 @@ const projectData = [
 
 
 //Template
+
 const PortfolioView = Vue.component('portfolioView', {    
   template: '#portfolio',
   data: function(){
@@ -137,18 +138,20 @@ const PortfolioView = Vue.component('portfolioView', {
   },
   methods: {
     filtering: function(f){
-        if(f == 'All'){
-          this.projects = projectData 
-        } else {
-          this.projects = projectData 
-          filtered = this.projects.filter(d => d.tags.includes(f))
-          this.projects = filtered;          
-        }
+        // $('#All div').removeClass('firstFilter');
+        
+        // if(f == 'All'){
+        //   this.projects = projectData 
+        // } else {
+        //   this.projects = projectData 
+        //   filtered = this.projects.filter(d => d.tags.includes(f))
+        //   this.projects = filtered;          
+        // }
     }
   }
 })
 
-const projectView = Vue.component('projectView', {
+const ProjectView = Vue.component('projectView', {
   template: '#project',
   data: function(){
     return {
@@ -158,27 +161,33 @@ const projectView = Vue.component('projectView', {
   }
 })
 
-projectRoutes = [
-  {path: '/', component: PortfolioView},
-  {path: '/:filter', component: PortfolioView},
-  {path: '/:path', component: projectView}
-]
-
+function dynamicProps(route){
+  console.log(route)
+} 
 
 //Routs
 Vue.use(VueRouter);
 
 const router = new VueRouter ({
-	// mode: 'history',
-	routes: projectRoutes
+	mode: 'history',
+	routes: [
+    {path: '/', component: PortfolioView},
+    {path: '/:filter', component: PortfolioView, props: dynamicProps},
+    {path: '/:path', component: ProjectView}
+  ]
 })
 
 const vm_project = new Vue({
 	router,
-	el: '#app'
+	el: '#app',
+  methods: {
+    test: function(){
+       console.log(this.$route)
+    }
+  }
 })
 
-
+$('#All div').addClass('firstFilter');
 
 
 

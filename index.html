@@ -17,7 +17,7 @@
 <body>
 <div id = 'app'>
     <div id = 'section-info'>
-         <h3 id = 'notice'>This site is under construction</h3>
+         <h3 id = 'notice'>/// This site is under construction ///</h3>
          <h1 id = 'name'>SHINGYUN CHIANG</h1>
          <p id = 'intro'>
           Hi! I am a graduate student in the <span class = 'info-span'>Information Design and Visualization</span> program of Northeasetern University in Boston. I worked at <span class = 'info-span'>Thomson Reuters Labs</span> and <span class = 'info-span'>Graphicacy</span> as a data visualization intern, responsible for <span class = 'info-span'>data analysis, visualization and product prototype</span>. The tools I use are mainly <span class = 'info-span'>D3, R and Adobe Illustrator</span>. I also have experience with Leaflet, ArcGIS/QGIS, Tableau and python. I love cooking, coffee and animals.
@@ -57,11 +57,12 @@
     </div>
 </div>
 
+
 <template id = 'portfolio'>
     <div id = 'section-work'>
         <div id = 'filters'>
-            <router-link class = 'filter' v-for = 'filter in filters' :key = filter :to = "'/' + filter" >
-                <div v-on:click = "filtering(filter)" :id = 'filter'>{{filter}}</div>
+            <router-link class = 'filter' v-for = 'filter in filters' :id = 'filter' :key = filter :to = "'/' + filter" >
+                <div v-on:click = "filtering(filter)" >{{filter}}</div>
             </router-link>
         </div>
         <div class = 'projects'>
@@ -83,13 +84,11 @@
 </template>
 
 <template id = 'project'>
-    <div id = 'section-work'>
-        <div id = 'filters'>
-            <router-link v-for = 'filter in filters' :key = filter :to = "'/' + filter">
-                <div class = 'filter' :id = 'filter'>{{filter}}</div>
-            </router-link>
-        </div>
-    </div>
+<!--     <div id = 'filters'>
+        <router-link class = 'filter' v-for = 'filter in filters' :id = 'filter' :key = filter :to = "'/' + filter">
+            <div v-on:click = "filtering(filter)">{{filter}}</div>
+        </router-link>
+    </div> -->
     <div class = 'project-page'>
         <p>{{$route.params.project}}</p>
     </div>

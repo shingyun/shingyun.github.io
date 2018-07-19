@@ -133,7 +133,7 @@ body {
 	cursor: pointer;
 }
 
-.filter.router-link-active div {
+.filter.router-link-active div, div.firstFilter {
 	font-weight: 400;
     border-bottom: 3px solid #777777;
 }
