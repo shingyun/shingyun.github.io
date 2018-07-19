@@ -126,111 +126,60 @@ const projectData = [
 ]
 
 
-// Creat a list of projects for the front page
-const vm_project = new Vue ({
-	el: '#section-work',
-	data: {
-	    projects: projectData,
-	    filters: filterData
-	}
+//Template
+const PortfolioView = Vue.component('portfolioView', {    
+  template: '#portfolio',
+  data: function(){
+    return {
+      projects: projectData,
+      filters: filterData    
+    }
+  },
+  methods: {
+    filtering: function(f){
+        if(f == 'All'){
+          this.projects = projectData 
+        } else {
+          this.projects = projectData 
+          filtered = this.projects.filter(d => d.tags.includes(f))
+          this.projects = filtered;          
+        }
+    }
+  }
 })
 
-// Filters
-$('#All').addClass('filter-selected')
-         .click(function(){
-         	$('.filter-selected').removeClass('filter-selected')
-	        $('#All').addClass('filter-selected')
-	        vm_project.projects = projectData 
-         });
-
-$('#Physical').click(function(){
-	$('.filter-selected').removeClass('filter-selected')
-	$('#Physical').addClass('filter-selected')
-	vm_project.projects = projectData 
-    filtered = vm_project.projects.filter(d => d.tags.includes('Physical'))
-    vm_project.projects = filtered;
+const projectView = Vue.component('projectView', {
+  template: '#project',
+  data: function(){
+    return {
+      projects: projectData,
+      filters: filterData   
+    }
+  }
 })
 
-$('#Interactive').click(function(){
-	$('.filter-selected').removeClass('filter-selected')
-	$('#Interactive').addClass('filter-selected')
-	vm_project.projects = projectData 
-    filtered = vm_project.projects.filter(d => d.tags.includes('Interactive'))
-    vm_project.projects = filtered;
-})
-
-$('#Mapping').click(function(){
-	$('.filter-selected').removeClass('filter-selected')
-	$('#Mapping').addClass('filter-selected')
-	vm_project.projects = projectData 
-    filtered = vm_project.projects.filter(d => d.tags.includes('Mapping'))
-    vm_project.projects = filtered;
-})
-
-$('#Static').click(function(){
-	$('.filter-selected').removeClass('filter-selected')
-	$('#Static').addClass('filter-selected')
-	vm_project.projects = projectData 
-    filtered = vm_project.projects.filter(d => d.tags.includes('Static'))
-    vm_project.projects = filtered;
-})
-
-$('#Story').click(function(){
-	$('.filter-selected').removeClass('filter-selected')
-	$('#Story').addClass('filter-selected')
-	vm_project.projects = projectData 
-    filtered = vm_project.projects.filter(d => d.tags.includes('Story'))
-    vm_project.projects = filtered;
-})
-
+projectRoutes = [
+  {path: '/', component: PortfolioView},
+  {path: '/:filter', component: PortfolioView},
+  {path: '/:path', component: projectView}
+]
 
 
 //Routs
 Vue.use(VueRouter);
 
-const projectView = {
-	template: '<div>this is {{$route.title}}</div>'
-}
+const router = new VueRouter ({
+	// mode: 'history',
+	routes: projectRoutes
+})
 
-// projectRoutes = [
-//   {path: '/', name: 'PovertyLevelsAndFloods', component: projectView},
-//   {path: '/', name: 'NetworkOfPep', component: projectView},
-//   {path: '/', name: 'WCWatchers', component: projectView},
-//   {path: '/', name: 'IncomeDisparity', component: projectView},
-//   {path: '/', name: 'ExonerationsOfMurder', component: projectView},
-//   {path: '/', name: 'AfterTheFloods', component: projectView},
-//   {path: '/', name: '3DPovertyMapOfHouston', component: projectView},
-//   {path: '/', name: 'ExonerationsInTheUS', component: projectView},
-//   {path: '/', name: 'JournalistDeaths', component: projectView},
-//   {path: '/', name: 'FakeNewsSentiment', component: projectView},
-//   {path: '/', name: 'EvictionsInEastBoston', component: projectView},
-//   {path: '/', name: 'CrimesInDC', component: projectView}
-// ]
-
-// projectRoutes = [
-//   {path: '/PovertyLevelsAndFloods', component: projectView},
-//   {path: '/NetworkOfPep', component: projectView},
-//   {path: '/WCWatchers', component: projectView},
-//   {path: '/IncomeDisparity', component: projectView},
-//   {path: '/ExonerationsOfMurder', component: projectView},
-//   {path: '/AfterTheFloods', component: projectView},
-//   {path: '/3DPovertyMapOfHouston', component: projectView},
-//   {path: '/ExonerationsInTheUS', component: projectView},
-//   {path: '/JournalistDeaths', component: projectView},
-//   {path: '/FakeNewsSentiment', component: projectView},
-//   {path: '/EvictionsInEastBoston', component: projectView},
-//   {path: '/CrimesInDC', component: projectView}
-// ]
+const vm_project = new Vue({
+	router,
+	el: '#app'
+})
 
 
-// const router = new VueRouter ({
-// 	mode: 'history',
-// 	routes: projectRoutes
-// })
 
-// const route_project = new Vue({
-// 	router,
-// 	base: '',
-// 	el: '#app'
-// })
+
+
 

@@ -110,6 +110,7 @@ body {
 #section-work{
 	padding-top: 0px;
 	padding-bottom: 30px;
+	min-height: 600px;
 }
 
 
@@ -120,18 +121,19 @@ body {
 	text-align: center;
 }
 
-.filter {
+.filter div {
 	display: inline-block;
 	padding: 2.5px 3px;
 	margin: 0px 5px;
 	border-bottom: 1px solid #777777;
+	color: #777777;
 }
 
-.filter:hover {
+.filter div:hover {
 	cursor: pointer;
 }
 
-.filter-selected {
+.filter.router-link-active div {
 	font-weight: 400;
     border-bottom: 3px solid #777777;
 }
@@ -163,6 +165,7 @@ body {
 }
 
 .projectTitle {
+	color: #222222;
 	width: 100%;
 	padding: 5px 0px;
 	font-weight: 400;
@@ -219,3 +222,27 @@ body {
 	margin: 25px 0px;
 }
 
+/*	Small screen setting */
+@media only screen and (max-width: 900px) {
+/*	.project {
+		width: 275px;
+		height: 275px;
+	}*/
+
+	#projects {
+        width: 80%;
+        margin: auto;
+	}
+} 
+
+@media only screen and (max-width: 600px) {
+	.project {
+		width: 275px;
+		height: 275px;
+	}
+
+	#projects {
+        width: 75%;
+        margin: auto;
+	}
+} 
