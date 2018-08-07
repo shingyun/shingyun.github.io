@@ -37,7 +37,6 @@ body {
 
 #app {
 	width: 100%;
-	min-width: 375px;
 }
 
 
@@ -62,6 +61,7 @@ body {
 #name, #intro, #socials {
 	width: 55%;
 	margin: auto;
+	min-width: 300px;
 }
 
 #name {
@@ -105,6 +105,49 @@ body {
 	border-bottom: 1.5px solid #F9DE5F;
 }*/
 
+
+/* Filters section */
+
+#section-filter {
+    width: 100%;
+    background-color: #FFFFFF;
+    padding: 15px 0px;
+}
+
+.filter-sticky {
+	position: fixed;
+	top: 0;
+	z-index: 9999;
+}
+
+.filter-sticky + #section-work {
+	padding-top: 55px;
+}
+
+#filters {
+	width: 50%;
+	margin: auto;
+	text-align: center;
+}
+
+.filter {
+	display: inline-block;
+	padding: 2.5px 3px;
+	margin: 0px 5px;
+	border-bottom: 1px solid #777777;
+	color: #777777;
+}
+
+.filter:hover {
+	cursor: pointer;
+}
+
+.filter-selected {
+/*	font-weight: 400;*/
+    border-bottom: 3px solid #777777;
+}
+
+
 /* Work section */
 
 #section-work{
@@ -113,32 +156,7 @@ body {
 	min-height: 600px;
 }
 
-
-#filters {
-	width: 50%;
-	margin: auto;
-	padding-bottom: 30px;
-	text-align: center;
-}
-
-.filter div {
-	display: inline-block;
-	padding: 2.5px 3px;
-	margin: 0px 5px;
-	border-bottom: 1px solid #777777;
-	color: #777777;
-}
-
-.filter div:hover {
-	cursor: pointer;
-}
-
-.filter.router-link-active div, div.firstFilter {
-	font-weight: 400;
-    border-bottom: 3px solid #777777;
-}
-
-.projects {
+#projects  {
     width: 61%;
     height: initial;
     margin: auto;
@@ -181,6 +199,7 @@ body {
 	font-weight: 400;	
 	color: #4D4D4D;
 	font-size: 16px;
+	visibility: hidden;
 }
 
 .project:hover .img-project{
@@ -195,7 +214,7 @@ body {
     opacity: 0.8;
 }
 
-.tags, .tools {
+#tags, #tools {
 	width: 100%;
 	margin: 2.5px 0px;
 }
@@ -214,28 +233,190 @@ body {
 }
 
 .tool {
-	background-color: hsla(0, 40%, 65%, 1);;
+	background-color: hsla(0, 40%, 65%, 1);
 }
 
+
+/*#project-focus-wrap {
+	width: 80%;
+	margin: auto;
+}*/
+
+/*  single project */
+#project-focus {
+	font-size: 0px;
+    white-space: nowrap;
+    width: 80%;
+    min-height: 500px;
+    max-height: 80%;
+    visibility: hidden;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #FFFFFF;
+    border: 2px solid #F1F1F1;
+    overflow: hidden;
+    overflow-y: scroll;
+    padding: 15px;
+}
+
+#btn-close {
+	color: #666666;
+	float: right;
+	font-size: 30px;
+	font-weight: bold;
+	position: absolute;
+	top: 3%;
+	right: 3%;
+}
+
+#btn-close:hover,
+#btn-close:focus {
+	text-decoration: none;
+	cursor: pointer;
+}
+
+
+#btn-next {
+	position: absolute;
+	top: 3%;
+	right: 6%;
+	width: 30px;
+	height: 30px;	
+	background-color: #000000;	
+}
+
+#project-box {
+    height: 100%;
+/*    transition: 0.35s;*/
+}
+
+.project-page {
+/*	border: 1px solid #777777;*/
+	font-size: initial;
+	display: inline-block;
+	white-space: normal;
+	width: 100%;
+	height: 100%;
+	vertical-align: top;
+	overflow: hidden;
+/*	overflow-y: scroll;*/
+}
+
+.project-page h3 {
+    width: 100%;
+    margin: 10px 0px;
+}
+
+.project-content {
+	width: 90%;
+	margin: auto;
+	overflow-x: hidden;
+	text-align: center;
+}
+
+.quick-infos {
+	padding: 20px 0px;
+}
+
+.quick-info {
+	display: inline-block;
+}
+
+.page-title {
+	padding: 10px; 
+	width: 100%;
+}
+
+.page-date, .page-tools {
+	border-left: 1.5px solid #777777;
+    padding: 0px 10px;
+	margin: 3px 0px;
+}
+
+.page-tool {
+	display: inline-block;
+	padding: 0px 3px;
+}
+
+.page-link {
+    border: 1px solid #777777;
+	margin: 3px 0px;
+	padding: 2px 10px;
+	transition: 0.5s;
+}
+
+.page-link:hover {
+	background-color: #777777;
+}
+
+.page-link a {
+	color: #777777;
+}
+
+.page-link a:hover {
+	color: #FFFFFF;
+}
+
+.page-link a:link, .page-link a:visited {
+    text-decoration: none;
+}
+
+.intro-box {
+	width: 100%;
+}
+
+.page-intro {
+	line-height: 1.6;
+	width: 80%;
+	margin: auto;
+	text-align: left;
+}
+
+.page-mainImg {
+	width: 98%;
+	padding: 15px 0px;
+}
+
+.page-mainImg img {
+	width: 100%;
+	pointer-events: none;
+	border: 1px solid #F1F1F1;
+}
+
+
+
+/*  footer */
 #section-footer {
 	text-align: center;
-	margin: 25px 0px;
+	padding: 25px 0px;
 }
 
 /*	Small screen setting */
 @media only screen and (max-width: 900px) {
-/*	.project {
+	.project {
 		width: 275px;
 		height: 275px;
-	}*/
+	}
+
+    #project-focus {
+    	width: 90%;
+    	margin: auto;
+    }
 
 	#projects {
-        width: 80%;
+        width: 70%;
         margin: auto;
 	}
 } 
 
 @media only screen and (max-width: 600px) {
+    
+    #project-focus {
+    	width: 90%;
+    	margin: auto;
+    }
+
 	.project {
 		width: 275px;
 		height: 275px;

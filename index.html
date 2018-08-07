@@ -10,96 +10,108 @@
       src="https://code.jquery.com/jquery-3.2.1.js"
       integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
       crossorigin="anonymous"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/d3/4.13.0/d3.js'></script>
     <script src = 'https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.16/vue.js'></script>
     <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/d3/4.13.0/d3.js'></script>
 </head>
 <body>
 <div id = 'app'>
     <div id = 'section-info'>
-         <h3 id = 'notice'>/// This site is under construction ///</h3>
+         <h3 id = 'notice'>//This site is under construction//</h3>
          <h1 id = 'name'>SHINGYUN CHIANG</h1>
          <p id = 'intro'>
-          Hi! I am a graduate student in the <span class = 'info-span'>Information Design and Visualization</span> program of Northeasetern University in Boston. I worked at <span class = 'info-span'>Thomson Reuters Labs</span> and <span class = 'info-span'>Graphicacy</span> as a data visualization intern, responsible for <span class = 'info-span'>data analysis, visualization and product prototype</span>. The tools I use are mainly <span class = 'info-span'>D3, R and Adobe Illustrator</span>. I also have experience with Leaflet, ArcGIS/QGIS, Tableau and python. I love cooking, coffee and animals.
+         	Hi! I am a graduate student in the <span class = 'info-span'>Information Design and Visualization</span> program of Northeasetern University in Boston. I worked at <span class = 'info-span'>Thomson Reuters Labs</span> and <span class = 'info-span'>Graphicacy</span> as a data visualization intern, responsible for <span class = 'info-span'>data analysis, visualization and product prototype</span>. The tools I use are mainly <span class = 'info-span'>D3, R and Adobe Illustrator</span>. I also have experience with Leaflet, ArcGIS/QGIS, Tableau and python. I love cooking, coffee and animals.
          </p>
          <div id = 'socials'>
-          <div class = 'social' id = 'linkedin'>
+         	<div class = 'social' id = 'linkedin'>
               <a href = 'https://www.linkedin.com/in/shingyunchiang/' target = _blank>
                 <img class = 'img-social' src = 'media/icons/icon-linkedin.png'>
               </a>
             </div>
-          <div class = 'social' id = 'twitter'>
+         	<div class = 'social' id = 'twitter'>
               <a href = 'https://twitter.com/ShingyunChiang' target = _blank>
                 <img class = 'img-social' src = 'media/icons/icon-twitter.png'>
               </a>
             </div>
-          <div class = 'social' id = 'cv'>
+         	<div class = 'social' id = 'cv'>
               <img class = 'img-social' src = 'media/icons/icon-cv.png'>
             </div>
          </div>
     </div>
-    <router-view></router-view>
-    <div id = 'section-footer'>
-        <div class = 'social' id = 'linkedin'>
-              <a href = 'https://www.linkedin.com/in/shingyunchiang/' target = _blank>
-                <img class = 'img-social' src = 'media/icons/icon-linkedin.png'>
-              </a>
+    <div id = 'section-filter'>
+      <div id = 'filters'>
+        <div v-for = 'filter in filters' class = 'filter' :id = 'filter' v-on:click = 'filtering(filter)' >{{filter}}</div>
+      </div>
+    </div>
+    <div id = 'section-work'>
+        <div id = 'projects'>
+            <div class = 'project' v-for = 'project in projects' v-on:click = 'showing(project, projects)'>
+                <img class = 'img-project' :src = 'project.img'>
+                <h3 class = 'projectTitle' v-text = 'project.title'></h3>
+                <!--<h3 class = 'mobile-projectTitle' v-text = 'project.title'></h3>-->
+                <div id = 'tags'>
+                    <div class ='tag' v-for = 'tag in project.tags'>{{tag}}</div>
+                </div>
+                <div id = 'tools'>
+                    <div class ='tool' v-for = 'tool in project.tools'>{{tool}}</div>
+                </div> 
             </div>
-            <div class = 'social' id = 'twitter'>
-              <a href = 'https://twitter.com/ShingyunChiang' target = _blank>
-                <img class = 'img-social' src = 'media/icons/icon-twitter.png'>
-              </a>
+        </div>
+        <div id = 'section-footer'>
+            <div class = 'social' id = 'linkedin'>
+                  <a href = 'https://www.linkedin.com/in/shingyunchiang/' target = _blank>
+                    <img class = 'img-social' src = 'media/icons/icon-linkedin.png'>
+                  </a>
+                </div>
+                <div class = 'social' id = 'twitter'>
+                  <a href = 'https://twitter.com/ShingyunChiang' target = _blank>
+                    <img class = 'img-social' src = 'media/icons/icon-twitter.png'>
+                  </a>
+                </div>
+                <div class = 'social' id = 'cv'>
+                  <img class = 'img-social' src = 'media/icons/icon-cv.png'>
+                </div>
+            </div>    
+        </div>
+        <div id = 'project-focus'>
+            <div id = 'project-box'>
+              <div class = 'project-page' v-for = 'project in projects' :id = "'page-'+project.path">
+                <div class = 'project-content'>
+                  <h3 class = 'page-title' v-text = 'project.title'></h3>
+                  <div class = 'quick-infos'>
+                    <div class = 'quick-info page-date' >
+                      <p><span class = 'page-subtitle'>Date  </span>{{project.date}}</p></div>
+                    <div class = 'quick-info page-tools'>
+                      <p>
+                      <span class = 'page-subtitle'>Tool</span>
+                      <span class = 'page-tool' v-for = 'tool in project.tools'>{{tool}}</span>
+                      </p>
+                    </div>
+                    <div class = 'quick-info page-link'>
+                      <a :href = 'project.link' target = '_blank'>Launch Project</a>
+                    </div>
+                  </div>
+                  <div class = 'intro-box'>
+                    <div class = 'page-intro'><p>{{project.intro}}</p></div>
+                    <div class = 'page-mainImg'><img :src = 'project.mainImg'></div>
+                  </div>
+  <!--                 <div class = 'page-paras'>
+                    <img class = 'page-img'>
+                    <p class = 'page-para'></p>
+                  </div> -->
+                </div>
+              </div>
             </div>
-            <div class = 'social' id = 'cv'>
-              <img class = 'img-social' src = 'media/icons/icon-cv.png'>
-            </div>
-        </div>    
+  <!--           <div id = 'btn-next' v-on:click = 'nextProject()'></div> -->
+           <!--  <div id = 'btn-close' v-on:click = 'closeProject'><p>Close</p></div> -->
+           <span id = 'btn-close' v-on:click = 'closeProject'>&times;</span>
+          </div>
+
     </div>
 </div>
-
-
-<template id = 'portfolio'>
-    <div id = 'section-work'>
-        <div id = 'filters'>
-            <router-link class = 'filter' v-for = 'filter in filters' :id = 'filter' :key = filter :to = "'/' + filter" >
-                <div v-on:click = "filtering(filter)" >{{filter}}</div>
-            </router-link>
-        </div>
-        <div class = 'projects'>
-            <div class = 'project' v-for = 'project in projects' :key = project.path>
-                <router-link :to = "'/' + project.path">
-                    <img class = 'img-project' :src = 'project.img'>
-                </router-link> 
-                    <h3 class = 'projectTitle' v-text = 'project.title'></h3>
-                    <!--<h3 class = 'mobile-projectTitle' v-text = 'project.title'></h3>-->
-                    <div class = 'tags'>
-                        <div class ='tag' v-for = 'tag in project.tags'>{{tag}}</div>
-                    </div>
-                    <div class = 'tools'>
-                        <div class ='tool' v-for = 'tool in project.tools'>{{tool}}</div>
-                    </div> 
-            </div>
-        </div>
-    </div>
-</template>
-
-<template id = 'project'>
-<!--     <div id = 'filters'>
-        <router-link class = 'filter' v-for = 'filter in filters' :id = 'filter' :key = filter :to = "'/' + filter">
-            <div v-on:click = "filtering(filter)">{{filter}}</div>
-        </router-link>
-    </div> -->
-    <div class = 'project-page'>
-        <p>{{$route.params.project}}</p>
-    </div>
-    <div class ='goBack'>
-        <router-link to ='/'>Back</router-link>
-    </div>
-</template>
-
-<!-- <script src="d3.js"></script> -->
-
+<!-- <script src = 'module-project.js'></script> -->
 <script src = 'script.js'></script>
+
 
 </body>
 </html>
