@@ -29,14 +29,14 @@ const vm_project = new Vue({
 
     },
     showing: function(pro, pros){
-        $('#project-focus').show(); 
+        $('#project-focus-box').show(); 
         console.log(pros)
         index = pros.findIndex(d => d.path == pro.path)
         console.log('index',index)
         x = (index)*100
         console.log('x',x)
         $('#project-box').css('transform','translateX(-'+ x +'%)')
-        $('#project-focus')
+        $('#project-focus-box')
         .css('visibility','visible')
         .scrollTop(0);
         $('#section-info').css('opacity',0.3);
@@ -44,8 +44,8 @@ const vm_project = new Vue({
 
     },
     closeProject: function(){
-        $('#project-focus').hide(); 
-        $('#project-focus').css('visibility','hidden');
+        $('#project-focus-box').hide(); 
+        $('#project-focus-box').css('visibility','hidden');
         $('#section-info').css('opacity',1);
         $('#section-work').css('opacity',1);
     },
@@ -59,12 +59,12 @@ const vm_project = new Vue({
 
 
 $('body').click(function(){
-   $('#project-focus').hide(); 
+   $('#project-focus-box').hide(); 
    $('#section-info').css('opacity',1);
    $('#section-work').css('opacity',1);
 })
 $('#projects').click(e => e.stopPropagation())
-$('#project-focus').click(e => e.stopPropagation())
+$('#project-focus-box').click(e => e.stopPropagation())
 $('#section-filter').click(e => e.stopPropagation())
 
 // Fixed the menu on scroll
@@ -83,13 +83,13 @@ $(window).scroll(function(e){
 $(window).ready(function(){
   $('#All').addClass('filter-selected')
   var menu_h = menu.outerHeight(true);
-  $('#project-focus').css('top',menu_h+0.1);
+  $('#project-focus-box').css('top',menu_h+0.1);
   console.log('ready screen width', $(window).width())
 })
 
 $(window).resize(function(){
   var menu_resize = menu.outerHeight(true);
-  $('#project-focus').css('top',menu_resize+0.1);
+  $('#project-focus-box').css('top',menu_resize+0.1);
   console.log('screen width', $(window).width())
 })
 

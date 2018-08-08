@@ -4,9 +4,13 @@
     <meta charset="utf-8">
     <meta name = 'viewport' content = 'width = device-width, initial-scale=1.0'>
     <title>Shing-Yun Chiang | Data visualizer</title>
-    <link href="style.css" rel="stylesheet"/>
+    <link href = 'style.css' rel='stylesheet'/>
     <link rel = 'stylesheet'
           href = 'https://fonts.googleapis.com/css?family=Lato:300,400,700'>
+    <link rel = 'stylesheet'
+          href = 'https://fonts.googleapis.com/css?family=Kirang+Haerang'>
+    <link rel = 'stylesheet'
+          href = 'https://fonts.googleapis.com/css?family=David+Libre'>
     <script
       src="https://code.jquery.com/jquery-3.2.1.js"
       integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
@@ -19,9 +23,12 @@
 <div id = 'app'>
     <div id = 'section-info'>
          <h3 id = 'notice'>//This site is under construction//</h3>
-         <h1 id = 'name'>SHINGYUN CHIANG</h1>
+         <div id = 'name-bar'>
+           <img class = 'name-el' id = 'img-logo' src = 'media/icons/logo.png'>
+           <h1 class = 'name-el' id = 'name'>SHING-YUN CHIANG</h1>
+         </div>
          <p id = 'intro'>
-         	Hi! I am a graduate student in the <span class = 'info-span'>Information Design and Visualization</span> program of Northeasetern University in Boston. I worked at <span class = 'info-span'>Thomson Reuters Labs</span> and <span class = 'info-span'>Graphicacy</span> as a data visualization intern, responsible for <span class = 'info-span'>data analysis, visualization and product prototype</span>. The tools I use are mainly <span class = 'info-span'>D3, R and Adobe Illustrator</span>. I also have experience with Leaflet, ArcGIS/QGIS, Tableau and python. I love cooking, coffee and animals.
+         	Hi! I am a graduate student in the <span class = 'info-span'>Information Design and Visualization</span> program of Northeasetern University in Boston. I worked at <span class = 'info-span'>Thomson Reuters Labs</span> and <span class = 'info-span'>Graphicacy</span> as a data visualization intern, responsible for <span class = 'info-span'>data analysis, visualization and product prototype</span>. The tools I use are mainly <span class = 'info-span'>D3, R, Adobe Illustrator and pencils</span>. I also have experience with Leaflet, ArcGIS/QGIS, Tableau and python. I love cooking, coffee and animals.
          </p>
          <div id = 'socials'>
          	<div class = 'social' id = 'linkedin'>
@@ -74,7 +81,8 @@
                 </div>
             </div>    
         </div>
-        <div id = 'project-focus'>
+        <div id = 'project-focus-box'>
+          <div id = 'project-focus'>
             <div id = 'project-box'>
               <div class = 'project-page' v-for = 'project in projects' :id = "'page-'+project.path">
                 <div class = 'project-content'>
@@ -108,7 +116,7 @@
                         <div class = 'page-img' v-for = 'img in para.subParas.imgs'>                          
                           <div class = 'caption-box'>
                             <div class = 'page-caption'>
-                              <i>{{img.caption}}</i>
+                              <p>{{img.caption}}</p>
                             </div>
                           </div>
                           <img :src = 'img.img'>
@@ -122,9 +130,10 @@
             </div>
   <!--           <div id = 'btn-next' v-on:click = 'nextProject()'></div> -->
            <!--  <div id = 'btn-close' v-on:click = 'closeProject'><p>Close</p></div> -->
-           <span id = 'btn-close' v-on:click = 'closeProject'>&times;</span>
+          
           </div>
-
+          <span id = 'btn-close' v-on:click = 'closeProject'>&times;</span>
+        </div>   
     </div>
 </div>
 <!-- <script src = 'module-project.js'></script> -->

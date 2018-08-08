@@ -60,26 +60,35 @@ p {
 	padding: 20px;	
 }
 
-#name, #intro, #socials {
+#name-bar, #intro, #socials {
 	width: 55%;
 	margin: auto;
 	min-width: 300px;
 }
 
 #name {
-	font-weight: 700;
+    font-family: 'Kirang Haerang', cursive;
+/*    font-size: 700;*/
     color: #4D4D4D;
-	font-size: 32px;
+	font-size: 36px;
 	letter-spacing: 3px;
-	padding: 15px 0px;
+}
 
+#img-logo {
+    width: 50px;
+    margin: 0px 5px;
+}
+
+.name-el {
+	display: inline-block;
+	vertical-align: middle;	
 }
 
 #intro {
 	font-size: 18px;
 	line-height: 1.6;
 	letter-spacing: 0px;
-	padding-top: 15px; 
+	padding-top: 20px; 
 }
 
 #socials {
@@ -248,7 +257,7 @@ p {
 }*/
 
 /*  single project */
-#project-focus {
+#project-focus-box {
 	font-size: 0px;
     white-space: nowrap;
     width: 80%;
@@ -265,12 +274,17 @@ p {
     padding: 15px;
 }
 
+/*#project-focus {
+	overflow: hidden;
+    overflow-y: scroll;
+}*/
+
 #btn-close {
 	color: #666666;
 	float: right;
 	font-size: 30px;
 	font-weight: bold;
-	position: absolute;
+	position: fixed;
 	top: 3%;
 	right: 3%;
 }
@@ -436,7 +450,9 @@ p {
     text-align: left;
 }
 
-
+.page-caption p {
+	font-family: 'David Libre', serif;
+}
 
 /*  footer */
 #section-footer {
@@ -451,7 +467,7 @@ p {
 		height: 275px;
 	}
 
-    #project-focus {
+    #project-focus-box {
     	width: 90%;
     	margin: auto;
     }
@@ -465,7 +481,7 @@ p {
 @media only screen and (max-width: 600px) {
     
 
-    #project-focus {
+    #project-focus-box {
     	width: 90%;
     	margin: auto;
     }
@@ -479,6 +495,10 @@ p {
         width: 80%;
         margin: auto;
 	}
+
+    .project-page {
+    	width: 100%;
+    }
 
     .quick-infos, .page-intro, .page-title, .page-para-text, .caption-box {
     	width: 100%;

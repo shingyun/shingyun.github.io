@@ -209,7 +209,7 @@ const projectData = [
       { subTitle: 'Data Insights',
         subParas: 
           {
-            des: 'I explored the data with R and made some simple bar charts to get a sense of how this data looks like. Firstly I took a look at the top 20 countries where the journalists were murdered. It is not surprised that the top 1 country was Iraq, but the second country was the Philippines. As I know, the Philippines does not have war frequently, why it ranked 2? Then I focused on the deaths within the Philippines and looked at the data by year. I found that the was a huge amount of deaths in 2009, it’s when the Maguindanao Massacre happened. 30 journalists died during the tragedy. Therefore I came up with an idea to show the connection between journalist deaths and historical events that occurred in the top 20 countries.',
+            des: 'I explored the data with R and made some simple bar charts to get a sense of how this data looks like. Firstly I took a look at the top 20 countries where the journalists were murdered. It is not surprised that the top 1 country was Iraq, but the second country was the Philippines. As I know, the Philippines does not have war frequently, why it ranked 2? Then I focused on the deaths within the Philippines and looked at the data by year. I found that there was a huge amount of deaths in 2009, it’s when the Maguindanao Massacre happened. 30 journalists died during the tragedy. Therefore I came up with an idea to show the connection between journalist deaths and historical events that occurred in the top 20 countries.',
             imgs: [
               {
                 img: 'media/page-images/journalist-deaths-5.png',
@@ -227,7 +227,7 @@ const projectData = [
       { subTitle: 'Interactions',
         subParas: 
           {
-            des: 'This visualization has three views: Countries, Years, and Causes. It would be cool if we could have connection between views. Therefore, I made a feature to enable the connection. When readers click on a circle, it will select a group of circles of a country, year or cause depends on which view the readers are at. For example, if a reader clicks on a circle in Iraq under Countries view, a group of circles in Iraq will be highlighted. Then the reader switch to Years view, the selection is still active, and readers could know the journalists were killed in Iraq from a historical perspective.',
+            des: 'This visualization has three views: Countries, Years, and Causes. It would be nice if it could have connection between views. Therefore, I made a feature to enable the connection. When readers click on a circle, it will select a group of circles of a country, year or cause depends on which view the readers are at. For example, if a reader clicks on a circle in Iraq under Countries view, a group of circles in Iraq will be highlighted. Then the reader switch to Years view, the selection is still active, and readers could know the journalists were killed in Iraq from a historical perspective.',
             imgs: [
               {
                  img: 'media/page-images/journalist-deaths-4.png',
