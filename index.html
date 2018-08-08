@@ -2,6 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
+    <meta name = 'viewport' content = 'width = device-width, initial-scale=1.0'>
     <title>Shing-Yun Chiang | Data visualizer</title>
     <link href="style.css" rel="stylesheet"/>
     <link rel = 'stylesheet'
@@ -77,13 +78,15 @@
             <div id = 'project-box'>
               <div class = 'project-page' v-for = 'project in projects' :id = "'page-'+project.path">
                 <div class = 'project-content'>
-                  <h3 class = 'page-title' v-text = 'project.title'></h3>
+                  <div class = 'page-title'>
+                    <h3 v-text = 'project.title'></h3>
+                  </div>
                   <div class = 'quick-infos'>
                     <div class = 'quick-info page-date' >
-                      <p><span class = 'page-subtitle'>Date  </span>{{project.date}}</p></div>
+                      <p><span class = 'info-title'>Date  </span>{{project.date}}</p></div>
                     <div class = 'quick-info page-tools'>
                       <p>
-                      <span class = 'page-subtitle'>Tool</span>
+                      <span class = 'info-title'>Tool</span>
                       <span class = 'page-tool' v-for = 'tool in project.tools'>{{tool}}</span>
                       </p>
                     </div>
@@ -95,10 +98,25 @@
                     <div class = 'page-intro'><p>{{project.intro}}</p></div>
                     <div class = 'page-mainImg'><img :src = 'project.mainImg'></div>
                   </div>
-  <!--                 <div class = 'page-paras'>
-                    <img class = 'page-img'>
-                    <p class = 'page-para'></p>
-                  </div> -->
+                  <div class = 'paras-box'>
+                    <div class = 'page-para' v-for = 'para in project.paras'>
+                      <div class = 'page-para-text'>
+                        <div class = 'sub-title'><h3>{{para.subTitle}}</h3></div>
+                        <div class = 'sub-para' ><p>{{para.subParas.des}}</p></div>
+                      </div>
+                      <div class = 'imgs'>
+                        <div class = 'page-img' v-for = 'img in para.subParas.imgs'>                          
+                          <div class = 'caption-box'>
+                            <div class = 'page-caption'>
+                              <i>{{img.caption}}</i>
+                            </div>
+                          </div>
+                          <img :src = 'img.img'>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -110,6 +128,7 @@
     </div>
 </div>
 <!-- <script src = 'module-project.js'></script> -->
+<script src = 'projects.js'></script>
 <script src = 'script.js'></script>
 
 

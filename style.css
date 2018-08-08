@@ -5,8 +5,9 @@
 	grey: #D3D3D3;
 	yellow: #F9DE5F
 	teal: #008080;
-	light-bluegeen:
-	light-red: ;
+	light-bluegeen:hsla(178, 20%, 55%, 1)
+	light-red:hsla(0, 40%, 65%, 1)
+
 */
 
 * {
@@ -19,9 +20,12 @@
 
 body {
 /*	background-color: #F3F3F3;*/
-	color: #777777;
+	color: #4D4D4D;
 }
 
+p {
+	font-size: 17px;
+}
 
 /*#logo{
 	width: 180px;
@@ -44,8 +48,6 @@ body {
 
 
 #section-info {
-
-/*    background-color: #D9D9D9;*/
 	height: initial;
     width: 100%;
     padding: 50px 0px; 
@@ -132,19 +134,22 @@ body {
 
 .filter {
 	display: inline-block;
-	padding: 2.5px 3px;
-	margin: 0px 5px;
-	border-bottom: 1px solid #777777;
+	padding: 3px 10px;
+	margin: 0px;
 	color: #777777;
 }
 
 .filter:hover {
 	cursor: pointer;
+	color: #FFFFFF;
+    background-color: #888888;
+    opacity: 0.6;
 }
 
 .filter-selected {
 /*	font-weight: 400;*/
-    border-bottom: 3px solid #777777;
+    color: #FFFFFF;
+    background-color: #888888;
 }
 
 
@@ -317,20 +322,34 @@ body {
 
 .quick-infos {
 	padding: 20px 0px;
+	text-align: left;
+}
+
+.quick-infos, .page-intro, .page-title, .page-para-text, .caption-box{
+	width: 80%;
+	margin: auto;
 }
 
 .quick-info {
 	display: inline-block;
 }
 
+.info-title {
+    color: hsla(178, 20%, 55%, 1);
+    font-weight: 400;
+}
+
 .page-title {
 	padding: 10px; 
-	width: 100%;
+	text-align: left;
+}
+
+.page-title h3 {
+	font-weight: 700;
 }
 
 .page-date, .page-tools {
-	border-left: 1.5px solid #777777;
-    padding: 0px 10px;
+    padding-right: 20px;
 	margin: 3px 0px;
 }
 
@@ -362,18 +381,16 @@ body {
     text-decoration: none;
 }
 
-.intro-box {
+.intro-box, .paras-box {
 	width: 100%;
 }
 
 .page-intro {
 	line-height: 1.6;
-	width: 80%;
-	margin: auto;
 	text-align: left;
 }
 
-.page-mainImg {
+.page-mainImg, .page-img {
 	width: 98%;
 	padding: 15px 0px;
 }
@@ -382,6 +399,41 @@ body {
 	width: 100%;
 	pointer-events: none;
 	border: 1px solid #F1F1F1;
+}
+
+.page-img img {
+	width: 100%;
+	pointer-events: none;
+	border: 1px solid #F1F1F1;
+}
+
+.page-para {
+	padding: 15px 0px;
+}
+
+.page-para-text, .page-caption {
+	line-height: 1.6;
+	text-align: left;	
+}
+
+.sub-title h3 {
+	font-size: 18px;
+	width: initial;
+	margin: 0px;
+}
+
+.sub-title {
+	width: max-content;
+	background-color: hsla(178, 20%, 55%, 1);
+	color: #FFFFFF;
+	padding: 2.5px 5px;
+}
+
+
+.page-caption {
+	padding: 10px 0px;
+    width: 45%;
+    text-align: left;
 }
 
 
@@ -412,18 +464,28 @@ body {
 
 @media only screen and (max-width: 600px) {
     
+
     #project-focus {
     	width: 90%;
     	margin: auto;
     }
 
 	.project {
-		width: 275px;
-		height: 275px;
+		width: 230px;
+		height: 230px;
 	}
 
 	#projects {
-        width: 75%;
+        width: 80%;
         margin: auto;
 	}
+
+    .quick-infos, .page-intro, .page-title, .page-para-text, .caption-box {
+    	width: 100%;
+    }
+
+    .page-caption {
+    	width: 100%;
+    }
+
 } 
