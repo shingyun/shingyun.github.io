@@ -65,7 +65,7 @@ $('body').click(function(){
 })
 $('#projects').click(e => e.stopPropagation())
 $('#project-focus-box').click(e => e.stopPropagation())
-$('#section-filter').click(e => e.stopPropagation())
+// $('#filters').click(e => e.stopPropagation())
 
 // Fixed the menu on scroll
 var menu = $('#section-filter');
@@ -92,7 +92,6 @@ $(window).resize(function(){
   $('#project-focus-box').css('top',menu_resize+0.1);
   console.log('screen width', $(window).width())
 })
-
 
 
 

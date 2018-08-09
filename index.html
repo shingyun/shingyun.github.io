@@ -11,20 +11,22 @@
           href = 'https://fonts.googleapis.com/css?family=Kirang+Haerang'>
     <link rel = 'stylesheet'
           href = 'https://fonts.googleapis.com/css?family=David+Libre'>
+    <link rel = 'stylesheet'
+          href = 'https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css'>
     <script
       src="https://code.jquery.com/jquery-3.2.1.js"
       integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
       crossorigin="anonymous"></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/d3/4.13.0/d3.js'></script>
     <script src = 'https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.16/vue.js'></script>
-    <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+    <script src = 'https://unpkg.com/vue-router/dist/vue-router.js'></script>
 </head>
 <body>
 <div id = 'app'>
     <div id = 'section-info'>
          <h3 id = 'notice'>//This site is under construction//</h3>
          <div id = 'name-bar'>
-           <img class = 'name-el' id = 'img-logo' src = 'media/icons/logo.png'>
+           <img class = 'name-el' id = 'img-logo' src = 'media/icons/logo.svg'>
            <h1 class = 'name-el' id = 'name'>SHING-YUN CHIANG</h1>
          </div>
          <p id = 'intro'>
@@ -91,7 +93,7 @@
                   </div>
                   <div class = 'quick-infos'>
                     <div class = 'quick-info page-date' >
-                      <p><span class = 'info-title'>Date  </span>{{project.date}}</p></div>
+                      <p><span class = 'info-title'>Date</span>{{project.date}}</p></div>
                     <div class = 'quick-info page-tools'>
                       <p>
                       <span class = 'info-title'>Tool</span>
@@ -119,7 +121,7 @@
                               <p>{{img.caption}}</p>
                             </div>
                           </div>
-                          <img :src = 'img.img'>
+                          <img class = 'single-img' :src = 'img.img'>
 
                         </div>
                       </div>
