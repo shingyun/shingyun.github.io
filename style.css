@@ -146,7 +146,9 @@ p {
 	display: inline-block;
 	padding: 3px 10px;
 	margin: 0px;
-	color: #777777;
+	color: #D3D3D3;
+	font-weight: 400;
+	letter-spacing: 1px;
 }
 
 .filter:hover {
@@ -232,6 +234,7 @@ p {
 #tags, #tools {
 	width: 100%;
 	margin: 2.5px 0px;
+	text-align: left;
 }
 
 .tag, .tool {
@@ -464,8 +467,8 @@ p {
 /*	Small screen setting */
 @media only screen and (max-width: 900px) {
 	.project {
-		width: 275px;
-		height: 275px;
+		width: 225px;
+		height: 225px;
 	}
 
     #project-focus-box {
@@ -476,13 +479,49 @@ p {
 	#projects {
         width: 70%;
         margin: auto;
+        text-align: center;
 	}
 } 
 
 @media only screen and (max-width: 600px) {
     
-    #filters {
+/*    #section-info {
     	width: 80%;
+    	margin: auto;
+    }*/
+
+    #section-filter {
+    	padding: 0px 0px;
+    }
+
+    #filters {
+    	width: 100%;
+    	padding: 0px 0px;
+    	background-color: #4D4D4D;
+    	overflow-x: auto;
+    	overflow-y: hidden;
+    	-webkit-overflow-scrolling: touch;
+    	white-space: nowrap;
+    	-ms-overflow-style: -ms-autohiding-scrollbar;
+    }
+
+    #filters::-webkit-scrollbar {
+        display: none; 
+    }
+
+    .filter {
+    	padding: 6px 15px;
+    	border-right: 0.5px solid #777777;
+    }
+
+	.filter:hover {
+        color: #FFFFFF;
+        background-color: #888888;
+	}
+
+    .filter-selected {
+        color: #FFFFFF;
+        background-color: #888888;
     }
 
     #project-focus-box {
@@ -498,6 +537,8 @@ p {
 	#projects {
         width: 80%;
         margin: auto;
+        text-align: center;
+        padding-top: 20px;
 	}
 
     .project-page {
