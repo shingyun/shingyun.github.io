@@ -472,13 +472,13 @@ p {
     } 
 
 	#projects {
-        width: 67%;
+        width: 70%;
         margin: auto;
 	}
 
 	.project {
-		width: 300px;
-		height: 300px;
+		width: 260px;
+		height: 260px;
 	}
 
     #project-focus-box {
@@ -512,6 +512,12 @@ p {
     #filters::-webkit-scrollbar {
         display: none; 
     }
+
+
+	.filter-sticky + #section-work {
+		padding-top: 30px;
+	}
+
 
     .filter {
     	padding: 6px 15px;
