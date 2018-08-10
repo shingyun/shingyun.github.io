@@ -55,7 +55,8 @@
     </div>
     <div id = 'section-work'>
         <div id = 'projects'>
-            <div class = 'project' v-for = 'project in projects' v-on:click = 'showing(project, projects)'>
+            <div class = 'project' v-for = 'project in projects'>
+               <!-- v-on:click = 'showing(project, projects)' -->
                 <a :href = 'project.dir' target = '_blank'>
                   <img class = 'img-project' :src = 'project.img'>
                 </a>
