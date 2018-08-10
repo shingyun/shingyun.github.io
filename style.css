@@ -535,6 +535,21 @@ p {
         background-color: #888888;
     }
 
+	.project:hover .img-project{
+	    opacity: 1;
+	}
+
+	.project:hover .projectTitle{
+		visibility: hidden;
+	}
+
+	.mobile-projectTitle {
+		font-weight: 400;	
+		color: #4D4D4D;
+		font-size: 16px;
+		visibility: visible;
+	}
+
     #project-focus-box {
     	width: 90%;
     	margin: auto;
