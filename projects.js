@@ -191,6 +191,7 @@ const projectData = [
     date: 'Apr. 2017',
     link: 'https://shingyun.github.io/JournalistsKilled/',
     path: 'JournalistDeaths',
+    dir: 'project/JournalistDeaths.html',
     mainImg: 'media/page-images/journalist-deaths-1.png',
     intro: 'This project visualized each journalist death through years, countries they were killed and causes, with the connection to historical events. The data set is from Committee to Protect Journalists(CPJ). There were more than 1700 journalists and media workers killed over the world from 1992 to April 2017 (when I downloaded the data set), this project analyzed 1232 deaths which are motive confirmed.',
     paras: [

@@ -1,0 +1,260 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    position: relative;
+    font-family: 'Lato','Helvetica','san-serif';
+    font-weight: 300;
+}
+
+body {
+/*	background-color: #F3F3F3;*/
+	color: #4D4D4D;
+}
+
+p {
+	font-size: 17px;
+}
+
+#header {
+	width: 100%;
+	position: fixed;
+	top: 0;
+	background-color: white;
+	z-index: 9999;
+	border-bottom: 1px solid #DDDDDD;
+}
+
+#name-bar {
+	width: 80%;
+	margin: auto;
+	min-width: 300px;
+	padding: 10px 0px;
+	text-align: left;
+}
+
+#name {
+    font-family: 'Kirang Haerang', cursive;
+    font-size: 700;
+    color: #4D4D4D;
+	font-size: 20px;
+	letter-spacing: 3px;
+}
+
+#img-logo {
+    width: 20px;
+    margin: 0px 5px;
+    padding-right: 5px;
+}
+
+.name-el {
+	display: inline-block;
+	vertical-align: middle;	
+}
+
+#socials {
+	float: right
+}
+
+.social {
+	margin-top: 5px;
+	display: inline-block;
+}
+
+.img-social {
+    width: 25px;
+}
+
+#project-content {
+	width: 80%;
+	margin: auto;
+	overflow-x: hidden;
+	text-align: center;
+	padding-top: 100px;
+	padding-bottom: 50px;
+}
+
+.quick-infos {
+	padding: 20px 0px;
+	text-align: left;
+}
+
+.quick-infos, .page-intro, .page-title, .page-para-text, .caption-box{
+	width: 80%;
+	margin: auto;
+}
+
+.quick-info {
+	display: inline-block;
+}
+
+.info-title {
+    background-color: hsla(178, 20%, 55%, 1);
+    color: #FFFFFF;
+    font-weight: 300;
+    padding: 3px 6px;
+    margin-right: 3px; 
+}
+
+.page-title {
+	padding: 10px; 
+	text-align: left;
+	margin-top: 30px;
+}
+
+.page-title h3 {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.page-date, .page-tools {
+    padding-right: 20px;
+	margin: 3px 0px;
+}
+
+.page-tool {
+	display: inline-block;
+	padding-right: 12px;
+}
+
+.page-link {
+    border: 1px solid hsla(178, 20%, 55%, 1);
+	margin: 0px 0px;
+	padding: 5px 10px;
+	transition: 0.5s;
+}
+
+.page-link:hover {
+	background-color: hsla(178, 20%, 55%, 0.7);
+}
+
+.page-link a {
+    color: #4D4D4D;
+}
+
+
+.page-link a:link, .page-link a:visited {
+    text-decoration: none;
+}
+
+.intro-box, .paras-box {
+	width: 100%;
+}
+
+.page-intro {
+	line-height: 1.6;
+	text-align: left;
+}
+
+.page-mainImg, .page-img {
+	width: 100%;
+	padding: 15px 0px;
+}
+
+.page-mainImg img {
+	width: 100%;
+	pointer-events: none;
+	border: 1px solid #F1F1F1;
+}
+
+.single-img {
+	pointer-events: none;
+	border: 1px solid #F1F1F1;	
+}
+
+.img-big {
+	width: 100%;
+}
+
+.img-small {
+	width: 60%;
+}
+
+
+.page-para {
+	padding: 15px 0px;
+}
+
+.page-para-text, .page-caption {
+	line-height: 1.6;
+	text-align: left;	
+}
+
+.sub-title h3 {
+	font-size: 18px;
+	width: initial;
+	margin: 0px;
+}
+
+.sub-title {
+	width: max-content;
+	background-color: hsla(178, 20%, 55%, 1);
+	color: #FFFFFF;
+	padding: 2.5px 5px;
+}
+
+
+.page-caption {
+	padding: 10px 0px;
+    width: 45%;
+    text-align: left;
+}
+
+.page-caption p {
+	font-family: 'David Libre', serif;
+}
+
+#page-footer {
+	width: 100%;
+	text-align: center;
+	padding-bottom: 50px;
+}
+
+#page-footer a {
+	text-decoration: none;
+	color: inherit;
+	display: block;
+	width: 90px;
+	margin: auto;
+}
+
+#page-footer div {
+	width: 90px;
+    background-color: hsla(178, 20%, 55%, 1);
+    color: #FFFFFF;
+    padding: 5px 0px;
+}
+
+@media only screen and (max-width: 600px) {
+
+	#name-bar {
+		width: 90%;
+		text-align: center;
+	}
+
+    .page-mainImg {
+    	width: 90%;
+    	margin: auto;
+    }
+
+	#socials {
+		float: none;
+	}
+
+	#project-content {
+	    width: 100%;
+	    padding-top: 60px;
+	    padding-bottom: 30px;
+    }  
+
+   .img-small, .img-big {
+		width: 90%;
+	}
+	
+	.page-caption {
+		width: 80%;
+	}
+
+} 
+
+
+
