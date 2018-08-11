@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name = 'viewport' content = 'width = device-width, initial-scale=1.0'>
+    <title>Shing-Yun Chiang | Data visualizer</title>
+    <link href = 'pageStyle.css' rel='stylesheet'/>
+    <link rel = 'stylesheet'
+          href = 'https://fonts.googleapis.com/css?family=Lato:300,400,700'>
+    <link rel = 'stylesheet'
+          href = 'https://fonts.googleapis.com/css?family=Kirang+Haerang'>
+    <link rel = 'stylesheet'
+          href = 'https://fonts.googleapis.com/css?family=David+Libre'>
+<!--     <link rel = 'stylesheet'
+          href = 'https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css'> -->
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.js"
+      integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+      crossorigin="anonymous"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/d3/4.13.0/d3.js'></script>
+    <script src = 'https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.16/vue.js'></script>
+    <script src = 'https://unpkg.com/vue-router/dist/vue-router.js'></script>
+</head>
+<body>
+<div id = 'container'>
+<!-- no need to change below -->
+  <div id = 'header'>
+    <div id = 'name-bar'>
+      <a href = '../index.html'>
+        <img class = 'name-el' id = 'img-logo' src = '../media/icons/logo.svg'>
+        <h1 class = 'name-el' id = 'name'>SHING-YUN CHIANG</h1>
+      </a>
+      <div class = 'name-el' id = 'socials'>
+          <div class = 'social' id = 'linkedin'>
+            <a href = 'https://www.linkedin.com/in/shingyunchiang/' target = _blank>
+              <img class = 'img-social' src = '../media/icons/icon-linkedin.png'>
+            </a>
+          </div>
+          <div class = 'social' id = 'twitter'>
+            <a href = 'https://twitter.com/ShingyunChiang' target = _blank>
+              <img class = 'img-social' src = '../media/icons/icon-twitter.png'>
+            </a>
+          </div>
+          <div class = 'social' id = 'cv'>
+            <img class = 'img-social' src = '../media/icons/icon-cv.png'>
+          </div>
+      </div>
+    </div>
+  </div>
+<!-- no need to change above-->
+  <div id = 'project-content'>
+      <div class = 'page-title'>
+          <h3>Fake News Sentiment</h3>
+      </div>
+      <div class = 'quick-infos'>
+          <div class = 'quick-info page-date' >
+             <p><span class = 'info-title'>Date</span> Apr. 2017</p>
+          </div>
+          <div class = 'quick-info page-tools'>
+             <p><span class = 'info-title'>Tool</span> D3</p>
+          </div>
+          <a href = 'https://shingyun.github.io/SentimentViz/' target = '_blank'>
+             <div class = 'quick-info page-link'>
+             Launch Project
+             </div>
+          </a>
+      </div>
+      <div class = 'intro-box'>
+          <div class = 'page-intro'><p>Americannews.com is identified as a fake news or satire website with over 5 millions followers on Facebook. The project analyzes sentiment of articles mentioned "Trump" and "Clinton" from the website using Python. The sentiment scores range from 1 (positive) to -1 (negative). The results of the site show most of the articles are scored between 0.5 ~ -0.5, which is not as dramatic as previous assumption of the project.</p></div>
+          <div class = 'page-mainImg'><img src = '../media/page-images/fake-news-1.png'></div>
+      </div>
+      <div class = 'paras-box'>
+          <div class = 'page-para'>
+              <div class = 'page-para-text'>
+                  <div class = 'sub-title'><h3>Insert</h3></div>
+                  <div class = 'sub-para'><p>Insert</p></div>
+              </div>
+              <div class = 'imgs'>
+                  <div class = 'page-img'>   
+                    <div class = 'caption-box'>
+                        <div class = 'page-caption'>
+                            <p>&darr; <br>Insert</p>
+                        </div>
+                    </div>
+                    <img class = 'single-img' src = 'Insert'>
+                  </div>
+              </div>
+          </div>
+          <div class = 'page-para'>
+              <div class = 'page-para-text'>
+                  <div class = 'sub-title'><h3>Insert</h3></div>
+                  <div class = 'sub-para'><p>Insert</p></div>
+              </div>
+              <div class = 'imgs'>
+                  <div class = 'page-img'>   
+                    <div class = 'caption-box'>
+                      <div class = 'page-caption'>
+                          <p>&darr; <br>Insert</p>
+                      </div>
+                    </div>
+                    <img class = 'single-img' src = 'Insert'>
+                  </div>
+                  <div class = 'page-img'>   
+                    <div class = 'caption-box'>
+                      <div class = 'page-caption'>
+                          <p>&darr; <br>Insert</p>
+                      </div>
+                    </div>
+                    <img class = 'single-img' src = 'Insert'>
+                  </div>
+                  <div class = 'page-img'>   
+                    <div class = 'caption-box'>
+                      <div class = 'page-caption'>
+                          <p>&darr; <br>Insert</p>
+                      </div>
+                    </div>
+                    <img class = 'single-img' src = 'Insert'>
+                  </div>
+              </div> 
+          </div>
+          <div class = 'page-para'>
+              <div class = 'page-para-text'>
+                  <div class = 'sub-title'><h3>Insert</h3></div>
+                  <div class = 'sub-para'><p>Insert</p></div>
+              </div>
+              <div class = 'imgs'>
+                  <div class = 'page-img'>   
+                    <div class = 'caption-box'>
+                        <div class = 'page-caption'>
+                            <p>&darr; <br>Insert</p>
+                        </div>
+                    </div>
+                    <img class = 'single-img img-big' src = 'Insert'>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <div id = 'page-footer'>
+    <a href = '../index.html'><div>Projects</div></a>
+  </div>
+</div>
+
+</body>

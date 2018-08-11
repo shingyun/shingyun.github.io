@@ -127,7 +127,7 @@ const projectData = [
     date: 'Dec. 2017',
     link: 'https://shingyun.github.io/afterthefloods/',
     path: 'AfterTheFloods',
-    dir: 'project/ExonerationsOfMurder.html',
+    dir: 'project/AfterTheFloods.html',
     mainImg: 'media/page-images/after-the-floods-1.png',
     intro: 'While I was interning at Graphicacy in Fall 2017, I analyzes 4,500 floods from 1984 to Sep. 2017 around the world, and showed relation between causes and impacts (e.g. deaths, people displaced) of floods historically and greographically.',
     paras: [
