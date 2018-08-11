@@ -7,6 +7,7 @@ const projectData = [
     date: 'May 2018',
     link: '',
     path: 'PovertyLevelsAndFloods',
+    dir: 'project/PovertyLevelsAndFloods.html',
     mainImg: 'media/page-images/poverty-and-flood-1.jpg',
     intro: '', 
     paras: [
@@ -30,6 +31,7 @@ const projectData = [
     date: 'Jul. 2018',
     link: '',
     path: 'NetworkOfPep',
+    dir: 'project/NetworkOfPep.html',
     mainImg: '',
     intro: '',
     paras: [
@@ -53,6 +55,7 @@ const projectData = [
     date: 'Jun. 2018',
     link: 'https://blogs.thomsonreuters.com/answerson/where-are-people-watching-the-world-cup/',
     path: 'WCWatchers',
+    dir: 'project/WCWatchers.html',
     mainImg: 'media/page-images/wc-watcher-1.jpg',
     intro: '',
     paras: [
@@ -76,6 +79,7 @@ const projectData = [
     date: 'Jul. 2018',
     link: 'https://shingyun.github.io/income-disparity/',
     path: 'IncomeDisparity',
+    dir: 'project/IncomeDisparity.html',
     mainImg: 'media/page-images/income-disparity-1.png',
     intro: '',
     paras: [
@@ -99,6 +103,7 @@ const projectData = [
     date: 'Nov. 2017',
     link: 'https://shingyun.github.io/exoneration-timeline/',
     path: 'ExonerationsOfMurder',
+    dir: 'project/ExonerationsOfMurder.html',
     mainImg: 'media/page-images/exoneration-murder-1.png',
     intro: "This project focuses on the exonerations of murder, which is the main accused crime in the exoneration data, and visualizes how the wrongful convictions impacted these exonerees' lives. The impact of the wrongful conviction is demonstrated via the animating timeline, pointing out what year and age the exoneree was at.",
     paras: [
@@ -122,6 +127,7 @@ const projectData = [
     date: 'Dec. 2017',
     link: 'https://shingyun.github.io/afterthefloods/',
     path: 'AfterTheFloods',
+    dir: 'project/ExonerationsOfMurder.html',
     mainImg: 'media/page-images/after-the-floods-1.png',
     intro: 'While I was interning at Graphicacy in Fall 2017, I analyzes 4,500 floods from 1984 to Sep. 2017 around the world, and showed relation between causes and impacts (e.g. deaths, people displaced) of floods historically and greographically.',
     paras: [
@@ -145,6 +151,7 @@ const projectData = [
     date: 'Mar. 2018',
     link: '',
     path: '3DPovertyMapOfHouston',
+    dir: 'project/3DPovertyMapOfHouston.html',
     mainImg: 'media/page-images/3D-poverty-houston-1.JPG',
     intro: 'This 3D portraits the elevation map of poverty in central part of Houston. The lower the area, the more poor people live there. The highest areas have a percentage of 0-10% population live under poverty line, the lowest areas have over 40% of population in poverty. The "holes" and the "hills" act as a metaphor of social hierarchy. Poor people — who are at a lower level in the society — are struggling in the holes, while the rich enjoy their life on the hills.',
     paras: [
@@ -168,6 +175,7 @@ const projectData = [
     date: 'Apr. 2017',
     link: '',
     path: 'ExonerationsInTheUS',
+    dir: 'project/ExonerationsInTheUS.html',
     mainImg: 'media/page-images/exonerations-1.png',
     intro: 'This project explored the data set on exonerations in the US. The data set is provided by The National Registry of Exonerations. This project has examined the data from different aspects through descriptive statistic methods and finally focused on the time that exonerees have experienced from the accused crimes occurred to wrongful convictions and to exonerations. This project also explored the answers of the following questions by visualizations: Who are these exonerees? Where were they exonerated? How long have them been waiting for exonerations? Does DNA as the new evidence help? How the types of accused crimes influence exonerations?',
     paras: [
@@ -247,6 +255,7 @@ const projectData = [
     date: 'Apr. 2017',
     link: 'https://shingyun.github.io/SentimentViz/',
     path: 'FakeNewsSentiment',
+    dir: 'project/FakeNewsSentiment.html',
     mainImg: 'media/page-images/fake-news-1.png',
     intro: 'Americannews.com is identified as a fake news or satire website with over 5 millions followers on Facebook. The project analyzes sentiment of articles mentioned "Trump" and "Clinton" from the website using Python. The sentiment scores range from 1 (positive) to -1 (negative). The results of the site show most of the articles are scored between 0.5 ~ -0.5, which is not as dramatic as previous assumption of the project.',
     paras: [
@@ -270,6 +279,7 @@ const projectData = [
     date: 'Feb. 2018',
     link: 'https://web.northeastern.edu/visualizingeastie/court-documents-suggest-who-gets-evicted-and-why/',
     path: 'EvictionsInEastBoston',
+    dir: 'project/EvictionsInEastBoston.html',
     mainImg: 'media/page-images/east-boston-evictions-1.png',
     intro: 'This project explores who are evicted and reasons in East Boston. Since there is no data on the background of people who face eviction, this project plots every eviction on a map and compare with income and race data. The visual outcome shows that low-income areas and Latino communities have more evictions.',
     paras: [
@@ -293,6 +303,7 @@ const projectData = [
     date: 'Aug. 2017',
     link: 'https://shingyun.github.io/dc_crime_2016/',
     path: 'CrimesInDC',
+    dir: 'project/CrimesInDC.html',
     mainImg: 'media/page-images/crime-dc-1.png',
     intro: 'This personal project explored the data set on crime in Washington DC of 2016, mapping out the crime-prone areas and time. The data set is from Washington DC government.',
     paras: [

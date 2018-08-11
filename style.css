@@ -212,10 +212,14 @@ p {
     opacity: 0;
 }
 
+.projectTitle:hover {
+	cursor: default;
+}
+
 .mobile-projectTitle {
-	font-weight: 400;	
 	color: #4D4D4D;
-	font-size: 16px;
+	height: 0;
+	font-size: 0px;
 	visibility: hidden;
 }
 
@@ -227,9 +231,9 @@ p {
 .project:hover .projectTitle{
 	transition: 1s;
 	visibility: visible;
-/*	background-color: white;*/
     opacity: 0.8;
 }
+
 
 #tags, #tools {
 	width: 100%;
@@ -544,10 +548,12 @@ p {
 	}
 
 	.mobile-projectTitle {
+	    height: initial;
 		font-weight: 400;	
 		color: #4D4D4D;
 		font-size: 16px;
 		visibility: visible;
+		text-align: left;
 	}
 
     #project-focus-box {
