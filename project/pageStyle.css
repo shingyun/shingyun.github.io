@@ -162,6 +162,10 @@ p {
 	width: 100%;
 }
 
+.img-medium {
+	width: 80%;
+}
+
 .img-small {
 	width: 60%;
 }
@@ -262,7 +266,7 @@ p {
 	    padding-bottom: 30px;
     }  
 
-   .img-small, .img-big {
+   .img-small, .img-medium, .img-big {
 		width: 90%;
 	}
 	
