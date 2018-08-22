@@ -210,6 +210,7 @@ const projectData = [
             imgs: [
               { 
                 img: 'media/page-images/journalist-deaths-3.png',
+                class: 'img-big',
                 caption: 'The reason why the journalists were killed. This visualization also shows the background information of journalists when users hover over a circle.'
               }
             ]
@@ -222,12 +223,15 @@ const projectData = [
             imgs: [
               {
                 img: 'media/page-images/journalist-deaths-5.png',
+                class: 'img-small',
                 caption: 'The top 20 countries where journalists were killed.'
               },{
                 img: 'media/page-images/journalist-deaths-6.png',
+                class: 'img-small',
                 caption: 'There was an unusual number of deaths in 2009 in Philippines.'               
               },{
                 img: 'media/page-images/journalist-deaths-2.png',
+                class: 'img-big',
                 caption: 'There is an event bar at the bottom, when hover over an event to show the connection to the deaths.'
               }
             ]
@@ -240,6 +244,7 @@ const projectData = [
             imgs: [
               {
                  img: 'media/page-images/journalist-deaths-4.png',
+                 class: 'img-big',
                  caption: 'This view shows the distribution of journalist deaths in Iraq on a timeline.'
               }
             ]

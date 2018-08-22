@@ -133,7 +133,7 @@ p {
     text-decoration: none;
 }
 
-.intro-box, .paras-box {
+.intro-box, #paras-box {
 	width: 100%;
 }
 
@@ -189,8 +189,13 @@ p {
 	width: max-content;
 	background-color: hsla(178, 20%, 55%, 1);
 	padding: 2.5px 7.5px;
+	margin: 10px 0px;
 }
 
+
+.sub-para {
+	padding-bottom: 50px;
+}
 
 .page-caption {
 	padding-top: 10px;

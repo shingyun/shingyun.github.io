@@ -1,5 +1,5 @@
 const filterData = 
-  ['All', 'Physical', 'Interactive', 'Mapping','Static', 'Story']
+  ['All', 'Physical', 'Interactive', 'Mapping','Static', 'Story', 'UI/UX']
 
 //Create a list of project 
 const vm_project = new Vue({
@@ -9,7 +9,7 @@ const vm_project = new Vue({
     filters: filterData   
   },
   methods: {
-    filtering: function(f){
+    filterTag: function(f){
         if(f == 'All'){
           $('.filter-selected').removeClass('filter-selected')
           $('#All').addClass('filter-selected')
@@ -27,6 +27,9 @@ const vm_project = new Vue({
         
         $('#project-box').css('transform','translateX(0)')
 
+    },
+    filterProject: function(project){
+        return pageData = project;
     },
     showing: function(pro, pros){
         $('#project-focus-box').show(); 

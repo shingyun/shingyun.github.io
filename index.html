@@ -50,12 +50,12 @@
     </div>
     <div id = 'section-filter'>
       <div id = 'filters'>
-        <div v-for = 'filter in filters' class = 'filter' :id = 'filter' v-on:click = 'filtering(filter)' >{{filter}}</div>
+        <div v-for = 'filter in filters' class = 'filter' :id = 'filter' v-on:click = 'filterTag(filter)' >{{filter}}</div>
       </div>
     </div>
     <div id = 'section-work'>
         <div id = 'projects'>
-            <div class = 'project' v-for = 'project in projects'>
+            <div class = 'project' v-for = 'project in projects' v-on:click = 'filterProject(project)'>
                <!-- v-on:click = 'showing(project, projects)' -->
                 <a :href = 'project.dir' target = '_blank'>
                   <img class = 'img-project' :src = 'project.img'>
@@ -124,7 +124,7 @@
                               <p>{{img.caption}}</p>
                             </div>
                           </div>
-                          <img class = 'single-img' :src = 'img.img'>
+                          <img :class = 'img.class' :src = 'img.img'>
                         </div>
                       </div>
                     </div>
@@ -140,7 +140,8 @@
         </div>   
     </div>
 </div>
-<!-- <script src = 'module-project.js'></script> -->
+
+
 <script src = 'projects.js'></script>
 <script src = 'script.js'></script>
 
