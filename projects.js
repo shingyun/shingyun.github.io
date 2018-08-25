@@ -1,57 +1,59 @@
 const projectData = [
-  { 
-    title: 'Poverty Levels and Floods',
-    img: 'media/project-images/poverty-levels-floods.png',
-    tags: ['Physical','Mapping'],
-    tools: ['QGIS','Illustrator','Laser cut'],
-    date: 'May 2018',
-    link: '',
-    path: 'PovertyLevelsAndFloods',
-    dir: 'project/PovertyLevelsAndFloods.html',
-    mainImg: 'media/page-images/poverty-and-flood-1.jpg',
-    intro: '', 
-    paras: [
-      { subTitle: '',
-        subParas: [
-          { 
-            img: '',
-            des: ''
-          },{ 
-            img: '',
-            des: ''
-          }
-        ]
-      }
-    ] 
-  },{
-    title: 'Network of Politicians and Banks',
-    img: 'media/project-images/pep-network.png',
-    tags: ['Static','Thomson Reuters'],
-    tools: ['Python','Gephi','Illustrator'],
-    date: 'Jul. 2018',
-    link: '',
-    path: 'NetworkOfPep',
-    dir: 'project/NetworkOfPep.html',
-    mainImg: '',
-    intro: '',
-    paras: [
-      { subTitle: '',
-        subParas: [
-          { 
-            img: '',
-            des: ''
-          },{ 
-            img: '',
-            des: ''
-          }
-        ]
-      }
-    ]    
-  },{
+  // { 
+  //   title: 'Poverty Levels and Floods',
+  //   img: 'media/project-images/poverty-levels-floods.png',
+  //   tags: ['Physical','Mapping'],
+  //   tools: ['QGIS','Illustrator','Laser cut'],
+  //   date: 'May 2018',
+  //   link: '',
+  //   path: 'PovertyLevelsAndFloods',
+  //   dir: 'project/PovertyLevelsAndFloods.html',
+  //   mainImg: 'media/page-images/poverty-and-flood-1.jpg',
+  //   intro: '', 
+  //   paras: [
+  //     { subTitle: '',
+  //       subParas: [
+  //         { 
+  //           img: '',
+  //           des: ''
+  //         },{ 
+  //           img: '',
+  //           des: ''
+  //         }
+  //       ]
+  //     }
+  //   ] 
+  // },
+  // {
+  //   title: 'Network of Politicians and Banks',
+  //   img: 'media/project-images/pep-network.png',
+  //   tags: ['Static','Thomson Reuters'],
+  //   tools: ['Python','Gephi','Illustrator'],
+  //   date: 'Jul. 2018',
+  //   link: '',
+  //   path: 'NetworkOfPep',
+  //   dir: 'project/NetworkOfPep.html',
+  //   mainImg: '',
+  //   intro: '',
+  //   paras: [
+  //     { subTitle: '',
+  //       subParas: [
+  //         { 
+  //           img: '',
+  //           des: ''
+  //         },{ 
+  //           img: '',
+  //           des: ''
+  //         }
+  //       ]
+  //     }
+  //   ]    
+  // },
+  {
     title: 'World Cup Watchers',
     img: 'media/project-images/wc-watchers.png',
     tags: ['Static','Thomson Reuters'],
-    tools: ['D3','Illustrator'],
+    tools: ['D3','R','Illustrator'],
     date: 'Jun. 2018',
     link: 'https://blogs.thomsonreuters.com/answerson/where-are-people-watching-the-world-cup/',
     path: 'WCWatchers',
@@ -75,7 +77,7 @@ const projectData = [
     title: 'Income Disparity',
     img: 'media/project-images/income-disparity.png',
     tags: ['Interactive'],
-    tools: ['D3'],
+    tools: ['R','D3'],
     date: 'Jul. 2018',
     link: 'https://shingyun.github.io/income-disparity/',
     path: 'IncomeDisparity',
@@ -300,7 +302,8 @@ const projectData = [
         ]
       }
     ]   
-  },{
+  },
+  {
     title: 'Crimes in Washington, DC',
     img: 'media/project-images/crime-dc.png',
     tags: ['Interactive','Mapping','Story'],
@@ -311,6 +314,31 @@ const projectData = [
     dir: 'project/CrimesInDC.html',
     mainImg: 'media/page-images/crime-dc-1.png',
     intro: 'This personal project explored the data set on crime in Washington DC of 2016, mapping out the crime-prone areas and time. The data set is from Washington DC government.',
+    paras: [
+      { subTitle: '',
+        subParas: [
+          { 
+            img: '',
+            des: ''
+          },{ 
+            img: '',
+            des: ''
+          }
+        ]
+      }
+    ]   
+  },
+  {
+    title: 'UI for Contract Exploration Tool',
+    img: 'media/project-images/contract-linking.png',
+    tags: ['UIUX'],
+    tools: ['Adobe Xd'],
+    date: 'Aug. 2018',
+    link: '',
+    path: 'ContractLinking',
+    dir: 'project/ContractLinking.html',
+    mainImg: 'media/page-images/contract-linking-1.png',
+    intro: '',
     paras: [
       { subTitle: '',
         subParas: [

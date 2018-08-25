@@ -42,7 +42,7 @@
             </a>
           </div>
           <div class = 'social' id = 'cv'>
-            <img class = 'img-social' src = '../media/icons/icon-cv.png'>
+            <a href = 'https://www.dropbox.com/s/n8cltepsu8709pt/Resume_SYChiang_082318.pdf?dl=0' target = '_blank'><img class = 'img-social' src = '../media/icons/icon-cv.png'></a>
           </div>
       </div>
     </div>
@@ -57,7 +57,7 @@
              <p><span class = 'info-title'>Date</span> Jun. 2018</p>
           </div>
           <div class = 'quick-info page-tools'>
-             <p><span class = 'info-title'>Tool</span> D3, Illustrator</p>
+             <p><span class = 'info-title'>Tool</span> D3, R, Illustrator</p>
           </div>
           <a href = 'https://blogs.thomsonreuters.com/answerson/where-are-people-watching-the-world-cup/' target = '_blank'>
              <div class = 'quick-info page-link'>
@@ -66,71 +66,74 @@
           </a>
       </div>
       <div class = 'intro-box'>
-          <div class = 'page-intro'><p>Insert</p></div>
-          <div class = 'page-mainImg'><img src = '../media/page-images/wc-watcher-1.jpg'></div>
+          <div class = 'page-intro'><p>The “World Cup Watcher” visualized distribution of viewership of the World Cup in 2014. I used bubble chart to display the results. A circle is a country or a region. The scale of circles indicates the amount of audience. Color shade indicates percentage of audience within a country/region; the darker the color, the higher proportion of audience. It is interesting to see some countries (e.g. China) have a huge group of audience, but the audience is only 18% of its population. Most of the countries in Europe have higher percentage of viewership although they don’t have a large amount of audience.</p></div>
+          <div class = 'page-mainImg'><img src = '../media/page-images/wc-watchers-1.jpg'></div>
       </div>
       <div class = 'paras-box'>
           <div class = 'page-para'>
               <div class = 'page-para-text'>
-                  <div class = 'sub-title'><h3>Insert</h3></div>
-                  <div class = 'sub-para'><p>Insert</p></div>
+                  <div class = 'sub-title'><h3>Data Analysis</h3></div>
+                  <div class = 'sub-para'><p>There are two kinds of datasets needed for this visualization: one is audience, the other is population. For the audience data, FIFA’s website has TV audience report for 2010 and 2014 World Cup. I obtained the population data from World Bank. After getting two datasets, I used R to combined them and identified missing data as well as inconsistent data. The last step was searching for Census report for countries that are missing from World Bank.</p></div>
               </div>
               <div class = 'imgs'>
                   <div class = 'page-img'>   
                     <div class = 'caption-box'>
                         <div class = 'page-caption'>
-                            <p>&darr; <br>Insert</p>
+                            <p>&darr; <br>This data table shows that some of the countries were in 2010’s report but not in 2014’s, which caused the inconsistency of the data. </p>
                         </div>
                     </div>
-                    <img class = 'single-img' src = 'Insert'>
+                    <img class = 'single-img' src = '../media/page-images/wc-watchers-2.png'>
                   </div>
               </div>
           </div>
+
           <div class = 'page-para'>
               <div class = 'page-para-text'>
-                  <div class = 'sub-title'><h3>Insert</h3></div>
-                  <div class = 'sub-para'><p>Insert</p></div>
+                  <div class = 'sub-title'><h3>Design Decisions</h3></div>
+                  <div class = 'sub-para'><p>Speaking about a visualization with global data, first idea came into my mind is choropleth. Choropleth is a nice format to show the distribution of a variable. However, FIFA’s report grouped some countries into a regional group (e.g. Pan Middle East) without listing out what countries are in the group. If we don’t know what countries are in that regional group, we couldn’t color them on the map. Moreover, choropleth is cable of showing one variable at a time, comparing the amount of audience and percentage seems not a good topic for choropleth.</p><br>
+                  <p>Since FIFA provided two years of audience data, it could be possible to comparing two years’ data and see if there is any change between two games. However, the inconsistent data from FIFA was the major issue of this idea. For example, Egypt was in 2010 report but disappeared in 2014, it might be grouped into a regional group (e.g. Pan Africa). So that it was not possible to show the change between two years’ data for Egypt. Moreover, when speaking to where the big market of World Cup is, it would be better to visualize the audience by country/region first. “Change” is not primary.</p>
+                  </div>
               </div>
               <div class = 'imgs'>
                   <div class = 'page-img'>   
-                    <div class = 'caption-box'>
-                      <div class = 'page-caption'>
-                          <p>&darr; <br>Insert</p>
-                      </div>
-                    </div>
-                    <img class = 'single-img' src = 'Insert'>
-                  </div>
-                  <div class = 'page-img'>   
-                    <div class = 'caption-box'>
-                      <div class = 'page-caption'>
-                          <p>&darr; <br>Insert</p>
-                      </div>
-                    </div>
-                    <img class = 'single-img' src = 'Insert'>
-                  </div>
-                  <div class = 'page-img'>   
-                    <div class = 'caption-box'>
-                      <div class = 'page-caption'>
-                          <p>&darr; <br>Insert</p>
-                      </div>
-                    </div>
-                    <img class = 'single-img' src = 'Insert'>
+                    <img class = 'single-img img-medium' src = '../media/page-images/wc-watchers-3.png'>
                   </div>
               </div> 
+              <div class = 'page-para-text'>
+                  <div class = 'sub-para'><p>Due to the inconsistent data, we finally decided to focus on 2014’s audience data and used bubble chart as the visual approach. bubble chart has a unusual looking which could be eye-catching, and it has flexibility for visualization. For example, I could have a circle for “Russia", and another circle for regional group “Pan Middle East.” I used D3.js to plot the chart, exported it as a SVG file and edited the graphic in Adobe Illustrator.</p>
+                  </div>
+              </div>
           </div>
+
           <div class = 'page-para'>
               <div class = 'page-para-text'>
-                  <div class = 'sub-title'><h3>Insert</h3></div>
-                  <div class = 'sub-para'><p>Insert</p></div>
+                  <div class = 'sub-title'><h3>Design for Different Platforms</h3></div>
+                  <div class = 'sub-para'><p>The plan was to publish the static visualization for mobile, laptop and paper report. For mobile version, it would be less texts and less details, the paper version would be more texts and more details.</p></div>
               </div>
               <div class = 'imgs'>
                   <div class = 'page-img'>   
                     <div class = 'caption-box'>
                         <div class = 'page-caption'>
-                            <p>&darr; <br>Insert</p>
+                            <p>&darr; <br>Mobile version. Click <a class = 'img-url' href = 'https://blogs.thomsonreuters.com/answerson/where-are-people-watching-the-world-cup/' target = '_blank'>HERE</a> to view full graphic.</p>
                         </div>
                     </div>
-                    <img class = 'single-img img-big' src = 'Insert'>
+                    <img class = 'single-img img-small' src = '../media/page-images/wc-watchers-4.png'>
+                  </div>
+                  <div class = 'page-img'>   
+                    <div class = 'caption-box'>
+                        <div class = 'page-caption'>
+                            <p>&darr; <br>Desktop version. Click <a class = 'img-url' href = 'https://www.dropbox.com/s/f4lqau82pwomigq/WorldCup_Laptop_Final_0524.jpg?dl=0' target = '_blank'>HERE</a> to view full graphic.</p>
+                        </div>
+                    </div>
+                    <img class = 'single-img img-medium' src = '../media/page-images/wc-watchers-5.png'>
+                  </div>
+                  <div class = 'page-img'>   
+                    <div class = 'caption-box'>
+                        <div class = 'page-caption'>
+                            <p>&darr; <br>Paper version. Click <a class = 'img-url' href = 'https://www.dropbox.com/s/jb34twzjbuqy44p/WorldCup_Letter_Final_0524.pdf?dl=0' target = '_blank'>HERE</a> to view full graphic.</p>
+                        </div>
+                    </div>
+                    <img class = 'single-img img-medium' src = '../media/page-images/wc-watchers-6.png'>
                   </div>
               </div>
           </div>

@@ -1,5 +1,5 @@
 const filterData = 
-  ['All', 'Physical', 'Interactive', 'Mapping','Static', 'Story', 'UI/UX']
+  ['All', 'Interactive', 'Mapping','Static', 'Story', 'UIUX', 'Physical']
 
 //Create a list of project 
 const vm_project = new Vue({

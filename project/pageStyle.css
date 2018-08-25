@@ -215,6 +215,11 @@ p {
 	font-family: 'David Libre', serif;
 }
 
+.img-url {
+	height: max-content;
+}
+
+
 #page-footer {
 	width: 100%;
 	text-align: center;
@@ -242,6 +247,8 @@ p {
 	padding: 5px 0px;
     transition: 1s;
 }
+
+
 
 
 @media only screen and (max-width: 600px) {
