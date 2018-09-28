@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name = 'viewport' content = 'width = device-width, initial-scale=1.0'>
     <title>Shing-Yun Chiang | Data visualizer</title>
+    <link href = '../media/icons/favicon.ico' rel = 'shortcut icon' type='image/x-icon'/>
     <link href = 'pageStyle.css' rel='stylesheet'/>
     <link rel = 'stylesheet'
           href = 'https://fonts.googleapis.com/css?family=Lato:300,400,700'>
@@ -54,86 +55,93 @@
       </div>
       <div class = 'quick-infos'>
           <div class = 'quick-info page-date' >
-             <p><span class = 'info-title'>Date</span> Jul. 2018</p>
+             <p><span class = 'info-title'>Date</span> Summer 2018</p>
           </div>
           <div class = 'quick-info page-tools'>
-             <p><span class = 'info-title'>Tool</span> Python, Gephi, Illustrator, Pencil</p>
+             <p><span class = 'info-title'>Tool</span> Python, R, D3, Gephi, Adobe Illustrator, Pencil</p>
           </div>
-          <a href = 'Insert' target = '_blank'>
+<!--           <a href = 'Insert' target = '_blank'>
              <div class = 'quick-info page-link'>
              Launch Project
              </div>
-          </a>
+          </a> -->
       </div>
       <div class = 'intro-box'>
-          <div class = 'page-intro'><p>Insert</p></div>
-          <div class = 'page-mainImg'><img src = 'Insert'></div>
+          <div class = 'page-intro'><p>This project was to show the network of politicians and banks in South Sudan. I was working with internal analysis team and an external data analyst under Brian Romer’s supervision at Thomson Reuters Labs. For me, it was a journey of balancing opposites perspectives. Analysts acted as audience for my visualization in this project. We integrated opinions from analysts and designers, and reach a consensus on the final visual solution.</p></div>
+          <div class = 'page-mainImg'><img src = '../media/page-images/pep-network-1.png'></div>
       </div>
       <div class = 'paras-box'>
           <div class = 'page-para'>
               <div class = 'page-para-text'>
-                  <div class = 'sub-title'><h3>Insert</h3></div>
-                  <div class = 'sub-para'><p>Insert</p></div>
-              </div>
-              <div class = 'imgs'>
-                  <div class = 'page-img'>   
-                    <div class = 'caption-box'>
-                        <div class = 'page-caption'>
-                            <p>&darr; <br>Insert</p>
-                        </div>
-                    </div>
-                    <img class = 'single-img' src = 'Insert'>
-                  </div>
+                  <div class = 'sub-title'><h3>What Data Look Likes?</h3></div>
+                  <div class = 'sub-para'><p>The data structure in spreadsheets from analysis team looks quit different from the structure ready for a network chart. Some work was needed to transform raw data into the workable format. Luckily I got some Python experts around, it is a nice chance to learn Python from them and benefit my project. I used Python to transform data into the format I need, and moved on to several visual experiments.</p></div>
               </div>
           </div>
+
           <div class = 'page-para'>
               <div class = 'page-para-text'>
-                  <div class = 'sub-title'><h3>Insert</h3></div>
-                  <div class = 'sub-para'><p>Insert</p></div>
+                  <div class = 'sub-title'><h3>Trail and Error</h3></div>
+                  <div class = 'sub-para'><p>A static network chart showing the relationship between politicians and banks is the expected outcome of this project. When a network chart is not interactive, it means that every node and every connection should be clear since users are not able to pull a node around or apply filters. A good news was that it is not a big dataset, therefore static format should not be a problem. </p></div>
               </div>
               <div class = 'imgs'>
                   <div class = 'page-img'>   
                     <div class = 'caption-box'>
-                      <div class = 'page-caption'>
+<!--                       <div class = 'page-caption'>
                           <p>&darr; <br>Insert</p>
-                      </div>
+                      </div> -->
                     </div>
-                    <img class = 'single-img' src = 'Insert'>
-                  </div>
-                  <div class = 'page-img'>   
-                    <div class = 'caption-box'>
-                      <div class = 'page-caption'>
-                          <p>&darr; <br>Insert</p>
-                      </div>
-                    </div>
-                    <img class = 'single-img' src = 'Insert'>
-                  </div>
-                  <div class = 'page-img'>   
-                    <div class = 'caption-box'>
-                      <div class = 'page-caption'>
-                          <p>&darr; <br>Insert</p>
-                      </div>
-                    </div>
-                    <img class = 'single-img' src = 'Insert'>
+                    <img class = 'single-img img-big' src = '../media/page-images/pep-network-2.jpg'>
                   </div>
               </div> 
+              <div class = 'page-para-text'>
+                  <div class = 'sub-para'><p>There are several ways to prototype a network chart. I have tried using D3.js, Gephi and R to make a few charts, but none of them formed a good shape. The chord chart from R was a potential solution aside from network chart, but this idea was rejected immediately from the analysis side. The existing and common (particularly for designers) solutions did not work out. I turned to the most fundamental approach — hand sketch.</p></div>
+              </div>
           </div>
+
           <div class = 'page-para'>
               <div class = 'page-para-text'>
-                  <div class = 'sub-title'><h3>Insert</h3></div>
-                  <div class = 'sub-para'><p>Insert</p></div>
+                  <div class = 'sub-title'><h3>Back To Simplicity</h3></div>
+                  <div class = 'sub-para'><p>After trying several approaches that are common in visualization practice and finding nothing really works, I picked up a pencil and did some random sketches. In a discussion with Brian, he mentioned that we should be able to track every node, and some nodes might have potential relationship. For example, Bank A and Bank B both link directly to Politician C, this might imply that Bank A and Bank B have a connection potentially. Thinking further toward this direction, an image of “a string of cherries” came into my mind. Each cherry is separate but connected to the same point.</p></div>
               </div>
               <div class = 'imgs'>
                   <div class = 'page-img'>   
                     <div class = 'caption-box'>
                         <div class = 'page-caption'>
-                            <p>&darr; <br>Insert</p>
+                            <p>&darr; <br>A string of cherries (credit: Max Pixel) and hand sketch.</p>
                         </div>
                     </div>
-                    <img class = 'single-img img-big' src = 'Insert'>
+                    <img class = 'single-img img-big' src = '../media/page-images/pep-network-3.jpg'>
+                  </div>
+                  <div class = 'page-img'>   
+                    <div class = 'caption-box'>
+                        <div class = 'page-caption'>
+                            <p>&darr; <br>The cherry-like network chart after styling</p>
+                        </div>
+                    </div>
+                    <img class = 'single-img img-small' src = '../media/page-images/pep-network-4.png'>
                   </div>
               </div>
+              <div class = 'page-para-text'>
+                  <div class = 'sub-para'><p>The outcome of the cherry idea worked really well, and this version reached the consensus from both design and analysis side. Circles in blue are politicians, those in green are banks. The size of a circle indicates the number of connections. The bigger, the more connections.</p></div>
+              </div>
           </div>
+          <div class = 'page-para'>
+              <div class = 'page-para-text'>
+                  <div class = 'sub-title'><h3>The Change of Data Structure</h3></div>
+                  <div class = 'sub-para'><p>We were really happy with the cherry-like version, however, analysis team found some issues with data from the cherry-like network chart. They removed the data on connections that only between politicians and emphasized the relationship between politicians and banks. The data changed, the cherry version was no longer working. We then adopted the visual outcome from Gephi with updated data. Finally here the spider-web-like network chart is!</p></div>
+              </div>
+              <div class = 'imgs'>
+                  <div class = 'page-img'>   
+                    <div class = 'caption-box'>
+                        <div class = 'page-caption'>
+                            <p>&darr; <br>The final delivery</p>
+                        </div>
+                    </div>
+                    <img class = 'single-img img-small' src = '../media/page-images/pep-network-5.jpg'>
+                  </div>
+
+              </div>
+          </div> 
       </div>
   </div>
   <div id = 'page-footer'>

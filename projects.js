@@ -24,31 +24,31 @@ const projectData = [
   //     }
   //   ] 
   // },
-  // {
-  //   title: 'Network of Politicians and Banks',
-  //   img: 'media/project-images/pep-network.png',
-  //   tags: ['Static','Thomson Reuters'],
-  //   tools: ['Python','Gephi','Illustrator'],
-  //   date: 'Jul. 2018',
-  //   link: '',
-  //   path: 'NetworkOfPep',
-  //   dir: 'project/NetworkOfPep.html',
-  //   mainImg: '',
-  //   intro: '',
-  //   paras: [
-  //     { subTitle: '',
-  //       subParas: [
-  //         { 
-  //           img: '',
-  //           des: ''
-  //         },{ 
-  //           img: '',
-  //           des: ''
-  //         }
-  //       ]
-  //     }
-  //   ]    
-  // },
+  {
+    title: 'Network of Politicians and Banks',
+    img: 'media/project-images/pep-network.png',
+    tags: ['Static','Thomson Reuters'],
+    tools: ['Python','Gephi','Illustrator'],
+    date: 'Jul. 2018',
+    link: '',
+    path: 'NetworkOfPep',
+    dir: 'project/NetworkOfPep.html',
+    mainImg: 'media/page-images/pep-network-1.png',
+    intro: '',
+    paras: [
+      { subTitle: '',
+        subParas: [
+          { 
+            img: '',
+            des: ''
+          },{ 
+            img: '',
+            des: ''
+          }
+        ]
+      }
+    ]    
+  },
   {
     title: 'World Cup Watchers',
     img: 'media/project-images/wc-watchers.png',
