@@ -92,6 +92,11 @@ p {
 	padding-top: 20px; 
 }
 
+.info-span {
+	font-weight: 400;
+    color: #4FA7BD;
+}
+
 #socials {
 	padding-top: 30px;
 }
@@ -174,15 +179,15 @@ p {
 }
 
 #projects  {
-    width: 61%;
+    width: 90%;
     height: initial;
     margin: auto;
 }
 
 .project {
 	min-width: 210px;
-	width: 225px;
-	height: 225px;
+	width: 350px;
+	height: 350px;
 	transition: 3s;
 	cursor: pointer;
 	display: inline-block;
@@ -480,13 +485,13 @@ p {
     } 
 
 	#projects {
-        width: 70%;
+        width: 90%;
         margin: auto;
 	}
 
 	.project {
-		width: 230px;
-		height: 230px;
+		width: 300px;
+		height: 300px;
 	}
 
     #project-focus-box {
@@ -598,12 +603,14 @@ p {
     }
 
 	.project {
-		width: 230px;
-		height: 230px;
+		width: 280px;
+		height: 280px;
+		margin-left: 5px;
+        margin-right: 5px;
 	}
 
 	#projects {
-        width: 80%;
+        width: 90%;
         margin: auto;
         text-align: center;
         padding-top: 20px;
