@@ -153,6 +153,7 @@ p {
     height: 100%;
 	margin: 0px;
 	font-weight: 400;
+	font-size: 17px;
 	letter-spacing: 2px;
 	color: #666666;
 }
@@ -195,7 +196,10 @@ p {
     margin-top: 10px;
     margin-bottom: 90px;
 	border: 1px solid #D0D0D0;
+}
 
+.img-project-box {
+	overflow: hidden;
 }
 
 .img-project {
@@ -217,6 +221,13 @@ p {
     opacity: 0;*/
 }
 
+.img-project:hover {
+	transition: 1s;
+	transform: scale(1.1);
+}
+
+
+
 /*.projectTitle:hover {
 	cursor: default;
 }*/
@@ -228,12 +239,7 @@ p {
 	visibility: hidden;
 }*/
 
-/*.project:hover .img-project{
-	transition: 1s;
-    opacity: 0.05;
-}
-
-.project:hover .projectTitle{
+/*.project:hover .projectTitle{
 	transition: 1s;
 	visibility: visible;
     opacity: 0.8;

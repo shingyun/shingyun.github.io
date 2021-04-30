@@ -59,7 +59,9 @@
             <div class = 'project' v-for = 'project in projects' v-on:click = 'filterProject(project)'>
                <!-- v-on:click = 'showing(project, projects)' -->
                 <a :href = 'project.dir' target = '_blank'>
-                  <img class = 'img-project' :src = 'project.img'>
+                  <div class = 'img-project-box'>
+                    <img class = 'img-project' :src = 'project.img'>
+                  </div>
                 </a>
                 <h3 class = 'projectTitle' v-text = 'project.title'></h3>
 <!--                 <h3 class = 'mobile-projectTitle' v-text = 'project.title'></h3> -->
