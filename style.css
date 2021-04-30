@@ -185,8 +185,8 @@ p {
 
 .project {
 	min-width: 210px;
-	width: 380px;
-	height: 380px;
+	width: 350px;
+	height: 350px;
 	transition: 3s;
 	cursor: pointer;
 	display: inline-block;
