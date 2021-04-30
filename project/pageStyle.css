@@ -12,14 +12,14 @@ body {
 }
 
 p {
-	font-size: 17px;
+	font-size: 21px;
 }
 
 #header {
 	width: 100%;
 	position: fixed;
 	top: 0;
-	background-color: white;
+	background: linear-gradient(80deg, #cbf4fc, #fcf4cb);
 	z-index: 9999;
 	border-bottom: 1px solid #DDDDDD;
 }
@@ -92,9 +92,8 @@ p {
 }
 
 .info-title {
-    background-color: hsla(178, 20%, 55%, 1);
-    color: #FFFFFF;
-    font-weight: 300;
+    color:#008080;
+    font-weight: 400;
     padding: 3px 6px;
     margin-right: 3px; 
 }
@@ -106,25 +105,27 @@ p {
 }
 
 .page-title h3 {
-    font-size: 24px;
+    font-size: 31px;
     font-weight: 700;
 }
 
 .page-date, .page-tools {
-    padding-right: 20px;
+    padding-right: 30px;
 	margin: 3px 0px;
 }
 
 .page-link {
-    border: 1.25px solid hsla(178, 20%, 55%, 1);
+    border: 1.25px solid rgba(0, 128, 128, 1);
+    border-radius: 25px;
 	margin: 0px 0px;
-	padding: 5px 10px;
-    color: hsla(178, 20%, 55%, 1);
+	padding: 5px 20px;
+    color: rgba(0, 128, 128, 1);
     font-weight: 400;
+    font-size: 19px;
 }
 
 .page-link:hover {
-	background-color: hsla(178, 20%, 55%, 1);
+	background-color: rgba(0, 128, 128, 0.7);
     color: #F7F7F7;
 	transition: 0.5s;
 }
@@ -181,18 +182,19 @@ p {
 }
 
 .sub-title h3 {
-	font-size: 18px;
+	font-size: 21px;
 	width: initial;
 	margin: 0px;
 	font-weight: 400;
-	color: #F7F7F7;
+	color: #008080;
+/*	color: #F7F7F7;*/
 	letter-spacing: 0.5px;
 }
 
 .sub-title {
-	width: max-content;
+/*	width: max-content;
 	background-color: hsla(178, 20%, 55%, 1);
-	padding: 2.5px 7.5px;
+	padding: 2.5px 7.5px;*/
 	margin: 10px 0px;
 }
 
@@ -230,22 +232,23 @@ p {
 	text-decoration: none;
 	color: inherit;
 	display: block;
-	width: 80px;
+	width: 120px;
 	margin: auto;
 }
 
 #page-footer div {
 	font-weight: 400;
-    border: 1.25px solid hsla(178, 20%, 55%, 1);
-    color: hsla(178, 20%, 55%, 1);
-    padding: 5px 0px;
+	font-size: 19px;
+    color: rgba(0, 128, 128, 1);
+    padding: 5px 20px;
+    border: 1.5px solid rgba(0, 128, 128, 1);
+    border-radius: 25px;
 }
 
 #page-footer div:hover {
     background-color: hsla(178, 20%, 55%, 1);
     color: #F7F7F7;
-	padding: 5px 0px;
-    transition: 1s;
+    transition: 0.5s;
 }
 
 

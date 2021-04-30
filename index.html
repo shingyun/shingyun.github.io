@@ -62,13 +62,13 @@
                   <img class = 'img-project' :src = 'project.img'>
                 </a>
                 <h3 class = 'projectTitle' v-text = 'project.title'></h3>
-                <h3 class = 'mobile-projectTitle' v-text = 'project.title'></h3>
-                <div id = 'tags'>
+<!--                 <h3 class = 'mobile-projectTitle' v-text = 'project.title'></h3> -->
+<!--                 <div id = 'tags'>
                     <div class ='tag' v-for = 'tag in project.tags'>{{tag}}</div>
                 </div>
                 <div id = 'tools'>
                     <div class ='tool' v-for = 'tool in project.tools'>{{tool}}</div>
-                </div> 
+                </div>  -->
             </div>
         </div>
         <div id = 'section-footer'>
@@ -87,7 +87,9 @@
                 </div>
             </div>    
         </div>
-        <div id = 'project-focus-box'>
+
+        
+<!--         <div id = 'project-focus-box'>
           <div id = 'project-focus'>
             <div id = 'project-box'>
               <div class = 'project-page' v-for = 'project in projects' :id = "'page-'+project.path">
@@ -97,10 +99,10 @@
                   </div>
                   <div class = 'quick-infos'>
                     <div class = 'quick-info page-date' >
-                      <p><span class = 'info-title'>Date</span>{{project.date}}</p></div>
+                      <p><span class = 'info-title'>DATE</span>{{project.date}}</p></div>
                     <div class = 'quick-info page-tools'>
                       <p>
-                      <span class = 'info-title'>Tool</span>
+                      <span class = 'info-title'>TOOL</span>
                       <span class = 'page-tool' v-for = 'tool in project.tools'>{{tool}}</span>
                       </p>
                     </div>
@@ -132,13 +134,15 @@
                   </div>
                 </div>
               </div>
-            </div>
+            </div> -->
+
+
   <!--           <div id = 'btn-next' v-on:click = 'nextProject()'></div> -->
            <!--  <div id = 'btn-close' v-on:click = 'closeProject'><p>Close</p></div> -->
           
-          </div>
+<!--           </div>
           <span id = 'btn-close' v-on:click = 'closeProject'>&times;</span>
-        </div>   
+        </div>    -->
     </div>
 </div>
 

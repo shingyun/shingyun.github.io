@@ -25,6 +25,30 @@ const projectData = [
   //   ] 
   // },
   {
+    title: 'Income Disparity',
+    img: 'media/project-images/income-disparity.png',
+    tags: ['Interactive'],
+    tools: ['R','D3'],
+    date: 'Jul. 2018',
+    link: 'https://shingyun.github.io/income-disparity/',
+    path: 'IncomeDisparity',
+    dir: 'project/IncomeDisparity.html',
+    mainImg: 'media/page-images/income-disparity-1.png',
+    intro: '',
+    paras: [
+      { subTitle: '',
+        subParas: [
+          { 
+            img: '',
+            des: ''
+          },{ 
+            img: '',
+            des: ''
+          }
+        ]
+      }
+    ]   
+  },{
     title: 'Network of Politicians and Banks',
     img: 'media/project-images/pep-network.png',
     tags: ['Static','Thomson Reuters'],
@@ -73,30 +97,6 @@ const projectData = [
         ]
       }
     ]  
-  },{
-    title: 'Income Disparity',
-    img: 'media/project-images/income-disparity.png',
-    tags: ['Interactive'],
-    tools: ['R','D3'],
-    date: 'Jul. 2018',
-    link: 'https://shingyun.github.io/income-disparity/',
-    path: 'IncomeDisparity',
-    dir: 'project/IncomeDisparity.html',
-    mainImg: 'media/page-images/income-disparity-1.png',
-    intro: '',
-    paras: [
-      { subTitle: '',
-        subParas: [
-          { 
-            img: '',
-            des: ''
-          },{ 
-            img: '',
-            des: ''
-          }
-        ]
-      }
-    ]   
   },{ 
     title: 'Exonerations of Murder',
     img: 'media/project-images/exoneration-murder.png',
